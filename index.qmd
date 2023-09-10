@@ -1,26 +1,26 @@
 ---
-title: "Intro to SPSS-EDUC_806"
+title: "EDUC_806- Quantitative Research Methods"
 author: "Hammed Akande"
 project:
   type: website
   output-dir: docs
 
-date: 11 September 2023
+date: 10 September 2023
 ---
 
 ## Chapter 1- Introduction to SPSS for Quantitative Research
 
-Welcome to the lab section of EDUC 806.
+Welcome to the lab section of EDUC 806. This section will focus (primarily) on demonstrating how to use "SPSS" for statistical analysis. This website will be updated as the course progresses. I'm passionate about open science and reproducibility- so my goal is to make this website readily available for anyone and methods covered reproducible as much as possible. As such, all the links to download any open data will be embedded in the website (so you can just click it and download as needed).
 
-### Learning Objectives
+#### Learning Objectives for this Chapter
 
 -   Become Familiar with the SPSS environment
 
 -   Learn how to prepare and manage data in SPSS
 
--   Learn how to perform descriptive statistics and inferential statistics using SPSS.
+-   Learn how to perform descriptive statistics using SPSS.
 
-### Software for Statistical Analysis
+#### Software for Statistical Analysis
 
 There are several software available for statistical analysis. For this course, we will be using SPSS throughout the semester. However, anyone interested in using R (or Python) should feel free to do so (and I'm happy to chat about that). If you're generally interested in using R for statistical analysis and would like a quick intro, please refer to this website [R Workshop for Statistical Analysis](https://drhammed.github.io/bookdown_workshop/ "R Workshop for Statistical Analysis").
 
@@ -36,7 +36,13 @@ There are several software available for statistical analysis. For this course, 
 
 -   Julia
 
-#rmarkdown::render("Intro to SPSS-EDUC_806.qmd", output_format = "html_document")
+|                    |                  SPSS                  |                 STATA                  |                  SAS                   |                                R/R-Studio                                |                             Python                             |               Julia                |
+|-------------|:--------:|:-----------:|:--------:|:--------:|:--------:|:--------:|
+| Price              | Free trial (paid subscription/license) | Free trial (paid subscription/license) | Free trial (paid subscription/license) |                    FREE, Open-Source (non-commercial)                    |                       FREE, Open-Source                        |            Open-Source             |
+| Interface          |     Click, Drag and Drop + Syntax      | Drag and Drop, Scripts, User-friendly  |             User-friendly              |                              User-friendly                               |                         User-friendly                          |           User-friendly            |
+| Data Visualization |      Basic plots, charts, graphs       |         Plots, charts, graphs          |        Simple and complex plots        |                  Plots, Graphs- simple, complex- GGplot                  |                         Plots, Graphs                          |           Plots, Graphs            |
+| Statistical models |      A lot of statistical models       |               Very good                |               Very good                | Common and complex (including integration of STAN for Bayesian Analysis) | Common and Complex (including running different ML algorithms) | Common and complex- also very fast |
+| Help forum         |         Google, Stack overflow         |         Google, Stack Overflow         |         Google, Stack Overflow         |                      Google, Stack Overflow, Github                      |                 Google, Stack Overflow, Github                 |   Google, Stack Overflow, Github   |
 
 # Chapter 2- 
 
