@@ -1,0 +1,43 @@
+---
+title: "Intro to SPSS-EDUC_806"
+author: "Hammed Akande"
+project:
+  type: website
+  output-dir: docs
+
+date: 11 September 2023
+---
+
+## Chapter 1- Introduction to SPSS for Quantitative Research
+
+Welcome to the lab section of EDUC 806.
+
+### Learning Objectives
+
+-   Become Familiar with the SPSS environment
+
+-   Learn how to prepare and manage data in SPSS
+
+-   Learn how to perform descriptive statistics and inferential statistics using SPSS.
+
+### Software for Statistical Analysis
+
+There are several software available for statistical analysis. For this course, we will be using SPSS throughout the semester. However, anyone interested in using R (or Python) should feel free to do so (and I'm happy to chat about that). If you're generally interested in using R for statistical analysis and would like a quick intro, please refer to this website [R Workshop for Statistical Analysis](https://drhammed.github.io/bookdown_workshop/ "R Workshop for Statistical Analysis").
+
+-   R
+
+-   ***`SPSS`***
+
+-   Python
+
+-   STATA
+
+-   SAS
+
+-   Julia
+
+#rmarkdown::render("Intro to SPSS-EDUC_806.qmd", output_format = "html_document")
+
+# Chapter 2- 
+
+# Chapter 3-
