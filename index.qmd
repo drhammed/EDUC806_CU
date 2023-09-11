@@ -39,7 +39,7 @@ There are several software available for statistical analysis. For this course, 
 -   Julia
 
 |                    |                  SPSS                  |                 STATA                  |                  SAS                   |                                R/R-Studio                                |                             Python                             |               Julia                |
-|-----------|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|
+|--------------------|:--------------------------------------:|:--------------------------------------:|:--------------------------------------:|:------------------------------------------------------------------------:|:--------------------------------------------------------------:|:----------------------------------:|
 | Price              | Free trial (paid subscription/license) | Free trial (paid subscription/license) | Free trial (paid subscription/license) |                    FREE, Open-Source (non-commercial)                    |                       FREE, Open-Source                        |            Open-Source             |
 | Interface          |     Click, Drag and Drop + Syntax      | Drag and Drop, Scripts, User-friendly  |             User-friendly              |                              User-friendly                               |                         User-friendly                          |           User-friendly            |
 | Data Visualization |      Basic plots, charts, graphs       |         Plots, charts, graphs          |        Simple and complex plots        |                  Plots, Graphs- simple, complex- GGplot                  |                         Plots, Graphs                          |           Plots, Graphs            |
@@ -56,7 +56,7 @@ Technically, SPSS interface is composed of 3 main windows:
 
 -   **Output**
 
-![](images/Output Window.png){fig-align="center"}
+![](images/Output%20Window.png){fig-align="center"}
 
 -   **Syntax**
 
@@ -176,7 +176,7 @@ From there, double click on the x-axis and a properties window should pop up:
 
 From there, you can click on the "scale", modify and apply it. Close the box and your adjustment will be reflected on the main plot.
 
-#### Practice Questions 
+#### Practice Questions
 
 1.  Using the world happiness report data set, perform a descriptive statistics of *Healthy life expectancy at birth*. You can download the data [here](https://drive.google.com/drive/folders/1mq7Lzfxssa0yHRjYb033BsS_8AqQNWZz?usp=sharing). The descriptive statistics should include measures of central tendency and dispersion/spread.
 
