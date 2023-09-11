@@ -61,6 +61,8 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -149,11 +151,12 @@ ul.task-list li input[type="checkbox"] {
 <p>Welcome to the lab section of EDUC 806. This section will focus (primarily) on demonstrating how to use “SPSS” for statistical analysis. This website will be updated as the course progresses. I’m passionate about open science and reproducibility- so my goal is to make this website readily available for anyone and methods covered reproducible as much as possible. As such, all the links to download any open data will be embedded in the website (so you can just click it and download as needed).</p>
 <section id="learning-objectives-for-this-chapter" class="level4">
 <h4 class="anchored" data-anchor-id="learning-objectives-for-this-chapter">Learning Objectives for this Chapter</h4>
-<ul>
-<li><p>Become Familiar with the SPSS environment</p></li>
-<li><p>Learn how to prepare and manage data in SPSS</p></li>
-<li><p>Learn how to perform descriptive statistics using SPSS.</p></li>
-</ul>
+<p>For this lab, we will get familiar with the SPSS software layout, and do basic descriptive statistics of some sample data to make sense of it. Specifically, we will be doing the following:</p>
+<ol type="1">
+<li><p>Opening SPSS and the SPSS layout- become familiar with the SPSS environment</p></li>
+<li><p>Learn how to prepare and manage data in SPSS- reviewing data view and the Variable View tab</p></li>
+<li><p>Learn how to perform descriptive statistics using SPSS- opening a sample data and producing different graphs</p></li>
+</ol>
 </section>
 <section id="software-for-statistical-analysis" class="level4">
 <h4 class="anchored" data-anchor-id="software-for-statistical-analysis">Software for Statistical Analysis</h4>
@@ -246,9 +249,137 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <ul>
-<li><p><strong>Output</strong></p></li>
-<li><p><strong>Syntax</strong></p></li>
+<li><strong>Output</strong></li>
 </ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Output Window.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<ul>
+<li><strong>Syntax</strong></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Syntax_window.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="data-importentry-and-preparation-in-spss" class="level4">
+<h4 class="anchored" data-anchor-id="data-importentry-and-preparation-in-spss"><strong>Data Import/Entry and Preparation in SPSS</strong></h4>
+<p>There are a couple different ways to load in data in SPSS.</p>
+<ol type="1">
+<li>Directly enter the data in the <em>“data”</em> view of SPSS. Variable name in columns and observations in rows and values in between. However, this can be time consuming especially when working with large dataset or if you already have them in different file formats (e.g.&nbsp;csv).</li>
+<li>Click on the <em>“File”</em> menu of SPSS, scroll down to <em>“import’</em> and select the file format you’d like to choose.</li>
+<li>If you have the data saved somewhere, or want to open data in “SPSS .sav format”, you can click on <em>“File”</em>, select the <em>“Open”</em>, and then <em>“Data.”</em></li>
+</ol>
+<p>Once you’ve loaded the data, the next thing is to check the information of variables. This can be achieved by clicking on the <em>“variable view”</em> beside the “data view” (in the main SPSS window). Technically, the data view shows the full data you just loaded and the variable view represents the additional (important) information of the loaded data. On this variable view screen, you can give the name to the variable and define properties. For example, you can decide to code the “missing data” as “999” here, set the “measure” as (nominal, ordinal, or scale), code categorical data as 0 and 1 (as needed), etc.</p>
+</section>
+<section id="data-management" class="level4">
+<h4 class="anchored" data-anchor-id="data-management">Data Management</h4>
+<p>In SPSS, you can process and make modifications to your raw data, including changing string to numeric data, computing a new variable, and merging multiple categories among others.</p>
+<p>There are two important functions that can be used for data management in SPSS.</p>
+<ol type="1">
+<li><p><strong>Transform &amp; Recode function</strong> - this can be used to recode data into different variables.</p>
+<p><img src="images/recode_new_var-01.png" class="img-fluid"></p></li>
+<li><p><strong>Compute Function</strong>- to compute a new summary variable. To do this, click on “transform”, then “compute variable’.</p>
+<p><img src="images/compute_variable.png" class="img-fluid"></p></li>
+</ol>
+<p><strong>Descriptive Statistics</strong></p>
+<p>Descriptive statistics provide a description, summary and show meaningful patterns in data using measure of central tendency and measure of dispersion (spread). The measure of central tendency include mean, median, mode and measure of dispersion include, standard deviation, variance, range, minimum and maximum statistic (which describe how the data is dispersed/spread).</p>
+<p>Note- we may not use range and min/max at the same time, same way we may not use Variance at the same time we use SD. This is because one is derivative of other. Put simply,</p>
+<p><code>Range = max - min</code></p>
+<p>Standard Deviation = <span class="math inline">\(\sqrt{variance}\)</span></p>
+<p><strong>Importance of Descriptive Statistics,</strong></p>
+<ol type="1">
+<li>Data exploration</li>
+<li>Give general sample description</li>
+<li>See if data are loaded correctly</li>
+</ol>
+<p>As part of descriptive stat, it is equally important to examine the distribution of data - that is whether the data is normally (or not) distributed. This can be checked by plotting the data and or through a calculation of skewness and kurtosis.</p>
+<p>In SPSS, there are two ways to perform descriptive stat- frequencies and descriptive (which usually produces the same result).</p>
+<p><strong>Let’s see how it’s done in SPSS.</strong></p>
+<p>For the purpose of this lab, we shall be using this example data which can be downloaded <a href="https://drive.google.com/drive/folders/1mq7Lzfxssa0yHRjYb033BsS_8AqQNWZz?usp=sharing">here</a>. This dataset contains demographic information of random participants and the quality of life. No identity is revealed and the data can be freely used.</p>
+<p>Suppose we’re interested in calculating the measures of central tendency (mean, median, and mode) as well as dispersion/spread (standard deviation, variance, and range). First, download the dataset in the link above (“Example_data_Lab1.sav or xlsx). Load the downloaded data into the SPSS spreadsheet (you’d see something like below):</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Descrip_Stat.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p><em>Now, let’s calculate descriptive statistics,</em></p>
+<p>From the default view, go to the top menu and selecta <em>Analyze</em>, then <em>Descriptive Statistics</em> and then <em>Frequencies</em>:</p>
+<p>A new window will pop up and ask you to specify for which variables you’d like to calculate descriptive statistics. Use the arrow to move the Age variable from the left-hand to the right-hand field (as seen here).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Freq_1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>Now, click the <em>Statistics</em> button. This will open a new window containing a list of statistics. Select mean. median. mode, range and standard deviation (of course, you can select as many as you want to be calculated). Also, select skewness and kurtosis (to check normality assumption).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Freq_2.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>Click <em>Continue</em>, and then <em>OK</em>. SPSS will produce the output table(s) containing the descriptive statistics we have chosen. If you calculate the frequency table, it will also include a frequency table–a list of all the possible values in the data set and their corresponding frequencies.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Output_Freq-01.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p><strong>Task one</strong></p>
+<p><em>Remember I said there are two ways to perform descriptive statistics in SPSS. I have shown the “frequencies” route. Now, perform descriptive statistics using the “descriptives” route. (hint- follow the same description above but instead of choosing the frequencies, select descriptives and do the same thing again).</em></p>
+</section>
+<section id="descriptive-statistics-and-histograms" class="level4">
+<h4 class="anchored" data-anchor-id="descriptive-statistics-and-histograms">Descriptive Statistics and Histograms</h4>
+<p>Here, we will continue with our measure of central tendency and dispersion as in the example above, but with the addition of a histogram to viisualize the distribution of our data (in relation to the chosen descriptive statistics).</p>
+<p>Imagine we wanted to know about quality of life across our respondents in the questionnaire, we can achieve this by calculating descriptive statistics, as well as plotting a histogram to examine the distribution of the data. Good thing is that SPSS has neat ways to plot data while calculating different measure of central tendency or dispersion. For instance, we can expand the example above by add the “<em>histogram</em>” plot to the output without using the graphs menu in SPSS (much easier)! Using the same dataset as above, we can calculate the descriptive statistics of quality of life.</p>
+<p>Like we did the other time, navigate to Analyze, then Descriptive Statistics, and then Frequencies. Select and drag the “<strong><em>quality of life</em></strong>”, and then move it into the field (“variable”) on the right using the arrow.</p>
+<p>Like in the last example, click the Statistics button and choose your measures of central tendency (mean, median, mode) and dispersion/spread (range, standard deviation, variance).</p>
+<p>Click continue, then we are back to the other window. Now before you proceed, ask SPSS to insert a histogram by clicking on the Charts button, then “histogram” (and check off Show normal curve on histogram):</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Charts_hist.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>Finally, you can click continue, and then OK.</p>
+<p>With this, SPSS will generate a table of the chosen descriptive statistics, and a histogram showing the distribution of quality of life with a superimposed normal distribution (for comparison):</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Result_hist1-01.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>From this result, we can easily see pattern of the data. The data contains minimum value of 3 and maximum of 20. The mean quality of life (QOL) is 11.45. Thus, we can say the central tendency of this distribution seems to be a good representation as the mean value is not so far from minimum and maximum value. It is however necessary to be sure the data doesn’t contain outliers as mean statistic is sensitive to outliers. In other words, to have good representation (average) in frequency distribution, your data must be controlled from outliers. Median (middle term in a data arranged in order of magnitude) is another commonly used statistic that is less affected by outliers and skewed data. From the result above, the median QOL is 11.50. This value is close to the mean which denote a possiblity of symmetrical distribution. It is also worth noting that median is mostly applicable to ordinal data set and skewed scale variable and may not be a reliable measure of central position if otherwise. Mode is the most frequent score in a data set and often the highest bar in histogram. From the result above, the quality of life with highest frequency is 15. However, mode may not also be a reliable measure of central position of this data as its applicable to categorical or nominal data set. Looking at the table, we can see that the values of mean, median and mode are very close and implies that the distribution is (almost) symmetrical.</p>
+<p>Standard deviation (SD) measures the spread of the data. The larger the value of SD, the more spread out the observations are. The SD of QOL is 4.394- which implies the QOL measurements are spread out relatively far from their mean position. Skewness represent how a variable is normally distributed around the mean position. Skeweness of 0 = normal (symmetrical) distribution. Value of skewenss close to 0 = near symmetrical. Less than 0 = negative skeweness. greater than 0 = positive skeweness. Looking at the table, the skewenss of QOL = 0.030 (skewness close to 0- near symmetrical). We can also check the histogram to confirm this. Note that, If the plot was perfectly symmetrical, the value of mean, median and mode should be exactly same thing.</p>
+<p>Lastly, Kurtosis measures the heaviness of the tail of distribution. A normal distribution = 0 kurtosis. Kurtosis is positive if the tails are heavier than for a normal distribution and negative if lighter. From the result above, kurtosis = -0.845 for QOL (which indicates a nearly normally distribution since they’re close to 0). However, since Kurtosis is negative here, it means that there are less data distribution at the tails- which means the data are centered around the mean position.</p>
+</section>
+<section id="plot-editscustomization" class="level4">
+<h4 class="anchored" data-anchor-id="plot-editscustomization">Plot Edits/Customization</h4>
+<p>Assuming you want to modify the scale of the plot output, you should double-click on the plot in the output window. Then, a Chart Editor should pop up:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Chart_Editor.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>Next is to hover your mouse over one of the values on the x-axis, and click one any. All of the x-axis values will become highlighted:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/x-axis_hover.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>From there, double click on the x-axis and a properties window should pop up:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Properties_window.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>From there, you can click on the “scale”, modify and apply it. Close the box and your adjustment will be reflected on the main plot.</p>
+</section>
+<section id="practice-questions" class="level4">
+<h4 class="anchored" data-anchor-id="practice-questions">Practice Questions</h4>
+<ol type="1">
+<li><p>Using the world happiness report data set, perform a descriptive statistics of <em>Healthy life expectancy at birth</em>. You can download the data <a href="https://drive.google.com/drive/folders/1mq7Lzfxssa0yHRjYb033BsS_8AqQNWZz?usp=sharing">here</a>. The descriptive statistics should include measures of central tendency and dispersion/spread.</p></li>
+<li><p>Plot histograms of <em>Healthy life expectancy at birth</em> . Looking at the mean, median, and mode, what do they indicate about the shape of the distribution? Can you verify that by looking at the histogram? How does the shape of this distribution compare to the normal (Gaussian) distribution superimposed over it?</p></li>
+</ol>
 </section>
 </section>
 <section id="chapter-2-" class="level1">
