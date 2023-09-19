@@ -22,6 +22,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -109,7 +143,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#chapter-1--introduction-to-spss-for-quantitative-research" id="toc-chapter-1--introduction-to-spss-for-quantitative-research" class="nav-link active" data-scroll-target="#chapter-1--introduction-to-spss-for-quantitative-research">Chapter 1- Introduction to SPSS for Quantitative Research</a></li>
-  <li><a href="#chapter-2-" id="toc-chapter-2-" class="nav-link" data-scroll-target="#chapter-2-">Chapter 2-</a></li>
+  <li><a href="#chapter-2--t-test-and-analysis-of-variance" id="toc-chapter-2--t-test-and-analysis-of-variance" class="nav-link" data-scroll-target="#chapter-2--t-test-and-analysis-of-variance">Chapter 2- T-test and Analysis of Variance</a></li>
   <li><a href="#chapter-3-" id="toc-chapter-3-" class="nav-link" data-scroll-target="#chapter-3-">Chapter 3-</a></li>
   </ul>
 </nav>
@@ -382,8 +416,224 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 </section>
 </section>
-<section id="chapter-2-" class="level1">
-<h1>Chapter 2-</h1>
+<section id="chapter-2--t-test-and-analysis-of-variance" class="level2">
+<h2 class="anchored" data-anchor-id="chapter-2--t-test-and-analysis-of-variance">Chapter 2- T-test and Analysis of Variance</h2>
+<section id="mean-confidence" class="level4">
+<h4 class="anchored" data-anchor-id="mean-confidence">Mean Confidence</h4>
+<p>Last week, we examined (among other things) the mean, median, mode and standard deviation. Also, we mentioned how the mean was representative of the data we looked at. Recall, the mean is about central tendency (where you have most of the data under the curve) and the standard deviation is about the variance.</p>
+<p>Now (with respect to last week example), imagine I only told you that the sample mean = 11.44 (and no other information about the estimates/data). The next question here should be how “confident” we are that most of the number will be close to “11.44”. Specifically, one would be curious about the sample variation and how different they are from the sample mean (11.44). This implies that the mean alone doesn’t tell the full story about how well it represent the data. It could be either representative of the sample (assuming standard deviation is small) or non-representative (if standard deviation is large). So, in order to be “confident” about how well mean represent the data, one need to know the standard deviation.</p>
+<p><em>How can we relate the mean and the standard deviation together, to give us a new number that tells us about the mean confidence?</em></p>
+<p>Thus, one could say the</p>
+<p><span class="math display">\[
+confidence = \dfrac {mean} {standard \hspace1ex deviation}
+\]</span></p>
+<p>The lower the standard deviation, the more confident we would be in the mean representation (because the value of confidence will be big). This confidence is very useful in the sense that it tells us about the ratio between what we think about our sample (the mean), and the variability in our sample (the standard deviation). In fact, this is the basic formula for the <strong>t-test</strong>!</p>
+<p><span class="math display">\[
+t =  \dfrac {measure \hspace1ex of \hspace1ex effect} {measure \hspace1ex of \hspace1ex error}
+\]</span></p>
+</section>
+<section id="t-test" class="level4">
+<h4 class="anchored" data-anchor-id="t-test">T-test</h4>
+<p>Generally, t-test is used to compare the differences in mean scores of (continuous) normally distributed data and used in hypothesis testing. Basically, you’d have to set a null (<span class="math inline">\(H_o\)</span>) hypothesis and alternate (<span class="math inline">\(H_a\)</span>)) hypothesis.</p>
+<p><span class="math inline">\(H_o\)</span> = no effective difference between the observed sample mean &amp; the (hypothesized) population mean— simply put, <em>difference in group means is zero</em> and any measured difference is due only to “chance”.</p>
+<p><span class="math inline">\(H_a\)</span> = difference in group means is different from zero (i.e.&nbsp;there are differences between the observed sample mean and the population mean).</p>
+<p>A student <em>t</em>-test can be either one or two-sided (also termed two-tailed). A one-sided test shows whether the observed mean is smaller or larger than the population mean and two-tailed t-test imply that the means are not equivalent. Also, the “t” test statistic is then calculated. Simply put, you reject the null hypothesis of your t-test if the observed <em>t</em>-statistic is more extreme than the <strong>critical value</strong> determined by the appropriate reference distribution. Where the appropriate reference distribution for the <em>t</em>-statistic is the <em>t</em> distribution. The critical value depends on the significance level of the test (the probability of erroneously rejecting the null hypothesis).</p>
+<p><strong>One-sample t-test</strong></p>
+<p>This is used to estimate the probability that your sample came from a specific population. Specifically, one sample t-test can be used to determine whether your sample mean, could have come from a paricular population having a specific mean. Technically, it uses the population known parameter, like the mean of the population and the standard deviation of the population. However, most times you don't know those parameters of the population! So, you have to estimate them from your sample.</p>
+<p>Recall from the formula of t-test we said earlier,</p>
+<p>$$ t = {measure 1ex of 1ex error}</p>
+<p>$$</p>
+<p>So,</p>
+<p><span class="math display">\[
+t =  \dfrac {mean \hspace1ex difference} {standard \hspace1ex error \hspace1ex of \hspace1ex mean}
+\]</span></p>
+<p>Where the <span class="math display">\[
+Mean \hspace1ex difference =  sample \hspace1ex mean -  population \hspace1ex mean
+\]</span></p>
+<p>Some points/assumptions here.</p>
+<ol type="1">
+<li><p>Continuous data.</p></li>
+<li><p>data should be a random sample and come from a</p></li>
+<li><p>normal population (normal distribution)</p></li>
+<li><p>Independent (values are not related to one another).</p></li>
+<li><p>No outliers.</p></li>
+<li><p>homoscedastic- homogeneity of variance</p></li>
+</ol>
+<p><strong>Meaning of this “t”</strong></p>
+<p>Put simply, <em>t</em> only tells us about the level of confidence in our data and nothing more. It is a property of the data and calculated by dividing the mean difference with the standard error of the sample.</p>
+<p><span class="math display">\[
+Standard \hspace1ex error \hspace1ex of \hspace1ex Mean =  \dfrac {standard \hspace1ex deviation}  {N}
+\]</span></p>
+<p>Take for example, your sample mean is 10 and you want to know if it came from a population also with mean of 10. Apparently, In this case, your <em>t</em> would be zero (10-10). This means there’s no difference between your sample mean and population mean. Now, imagine you resample and your mean is now 12 (because the sample mean may not necessarily be the same every time you sample), the value of <em>t</em> would clearly be 2 (12-10 = 2). However,it is also worth noting that the direction of the sign will depend on the estimated standard error. Which means, If the standard error of the sample is positive, then t could be positive (and negative if otherwise). So, if the standard error is smaller, the t gets bigger and thus, we could be more confident in the mean difference.</p>
+<p>Now, let’s practice this using data</p>
+</section>
+<section id="one-sample-t-test-in-spss" class="level4">
+<h4 class="anchored" data-anchor-id="one-sample-t-test-in-spss">One-Sample t-test in SPSS</h4>
+<p>The link to download the data for this example can be found <a href="https://drive.google.com/file/d/1AlSe-sNL1ZArOd79SuSiyvCtgs8xPrU8/view?usp=sharing">here</a>.</p>
+<p>It has been reported that the mean height of U.S. adults of age &gt;= 20 is about 66.5 inches (63.8 for females and 69.3 for males)- <a href="https://www.cdc.gov/nchs/data/nhsr/nhsr122-508.pdf">reported by CDC</a>. In this example data, we have a sample of over 400 college students from a college. We are interested in testing if the mean height of students at this particular college is significantly different than 66.5 inches (using a one-sample <em>t</em> test).</p>
+<p>To start this, we need to state the null and alternative hypotheses:</p>
+<p><span class="math inline">\(H_o\)</span> = the mean height of students in this college = 66.5</p>
+<p><span class="math inline">\(H_a\)</span> = the mean height of students in this college is not equal to 66.5</p>
+<p>But before we move on, it maybe good to do a quick <strong>Exploratory Data Analysis (EDA)</strong></p>
+<p>For this example, we will use the <em>Height</em> variable (a continuous variable representing each respondent's height in inches). The heights shows a range of values from 55.00 to 84.41 (click on <strong>Analyze</strong> &gt; <strong>Descriptive</strong> <strong>Statistics</strong> &gt; <strong>Descriptives</strong>- check the min and max value to see that).</p>
+<p>Also, let’s create a histogram of the data so we can get an idea of the distribution, and to see if our hypothesized mean (test value) is near our sample mean. To do this, you can click <strong>Graphs &gt; Histogram</strong>. Move variable Height to the Variable dialog box, then click <strong>OK</strong>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Hist_1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>From the plot, we can see that height is relatively symmetrically distributed about the mean (although there is a slightly long tail towards the right). The reference lines indicate that sample mean is slightly greater than the hypothesized mean (but not so much). This is a clue that the result of t-test may be significant, but let’s run it and see.</p>
+<p>To do this in SPSS, you can click on&nbsp;<em><strong>Analyze &gt; Compare Means &gt; One-Sample T Test</strong>.</em> Move the variable <em>Height</em> to the <strong>Test Variable(s)</strong> area.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/On-sample_ttest_1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>Ideally, the One-Sample T Test window should open and you can specify the variables to be used in the analysis. Like last week example (if you look at the left), all of the variables in your dataset will appear in the list on the left side. You can the drag variables of interest to the <strong>Test Variable(s)</strong> area by selecting them in the list and click the move arrow button. In the <strong>Test Value</strong> field, enter 66.5.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/one sample t-test.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p><strong>Test Variable(s):</strong> The variable you want to compare its mean to the test value (hypothesized population mean). You can also run multiple One Sample <em>t</em> Tests simultaneously if you select more than one test variable. Each variable will be compared to the same Test Value.&nbsp;</p>
+<p><strong>Test Value:</strong> The (hypothesized) population mean against which you will compare your test variable(s).</p>
+<p><strong>Estimate effect sizes:</strong> This is optional but If checked, it will print effect size statistics -- specifically, the Cohen’s <em>d</em> -- for the test(s). (Note: If you do not see this option in your own SPSS, it might be that you’re using the old version of SPSS).</p>
+<p>Lastly, if you click on <strong><em>Options,</em></strong>it will open a window where you can specify the <strong>Confidence Interval Percentage</strong> and how the test should treat <strong>Missing Values</strong> (i.e., <strong>Exclude cases analysis by analysis</strong> or <strong>Exclude cases listwise</strong>). Click <strong>Continue</strong>.</p>
+<p>Once you’re done, you can click <strong>OK</strong> to run the One Sample <em>t</em> Test.</p>
+<p>See below for the output:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Output_1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>Two sections appear in the one-sample t-test output: <strong>One-Sample Statistics</strong> and <strong>One-Sample Test</strong>. The first section, <strong>One-Sample Statistics</strong>, provides general information about the “Height”- including the valid (nonmissing) sample size (<em>n- 408</em>), mean (68.0 3inches), standard deviation, and standard error.</p>
+<p><em>The second section, <strong>One-Sample Test</strong>, displays the results most relevant to the One Sample t Test.</em>&nbsp;</p>
+<ol type="1">
+<li><strong>Test Value</strong>: The same number we entered as the test value above.</li>
+<li><strong>t Statistic</strong>: The “t” test statistic of the one-sample <em>t</em> test. From the result above, we can see that <em>t</em> = 5.810. Recall, like we described above, <em>t</em> is calculated by dividing the mean difference by the standard error of the sample.</li>
+<li><strong>Mean Difference</strong>: This represent the difference between the “observed” sample mean and the “expected” mean (test value). The sign of the mean difference corresponds to the sign of the <em>t</em> value. The positive <em>t</em> value (in this case) denotes that the mean height of the sample is &gt; than the test (hypothesized) value (66.5).</li>
+<li><strong>df</strong>: The degrees of freedom. For a one-sample <em>t</em> test, df = <em>n</em> - 1; so here, df = 408 - 1 = 407.</li>
+<li><strong>Significance</strong> (One-Sided p and Two-Sided p): The p-values of the possible one-sided alternative hypotheses (mean height &gt; 66.5) and two-sided alternative hypothesis (mean height ≠ 66.5), respectively. We were only interested in the two-sided alternative hypothesis, based on our hypothesis.</li>
+<li><strong>Confidence Interval for the Difference</strong>: The confidence interval for the difference between the our chosen test value and the sample mean.</li>
+</ol>
+<p><strong>Interpretation</strong></p>
+<p>Recall from our hypothesis above, the test value was 66.5 inches (which represent the average adult height in the U.S). However, from our result, since p &lt; 0.001 (significant across all conventional levels of significance), we have evidence to reject the null hypothesis that the mean height of students in that particular college is 66.5. Thus, we can conclude that the mean height of students in that college is significantly different than 66.5 inches.</p>
+<p>In other words, we can say:</p>
+<ul>
+<li><p>There is a significant difference in the mean height of the students in that college and the overall adult population in the U.S. (<em>p</em> &lt; .001).</p>
+<p>and</p></li>
+<li><p>The average students height of this college is about 1.53 inches taller than the average U.S. adult population (95% CI [1.013, 2.050]).</p></li>
+</ul>
+</section>
+<section id="two-sample-t-test-independent-sample" class="level4">
+<h4 class="anchored" data-anchor-id="two-sample-t-test-independent-sample">Two Sample t-Test (Independent Sample)</h4>
+<p>In independent sample (two sample t-Test), there is a single factor (explanatory) variable with two levels which split the subjects into two groups. Often, one level is considered the <strong>control</strong>, while the other is the <strong>treatment</strong>. Then, the subjects will be randomly assigned to one of the two groups. Following the assignment to a group, each subject has some quantity measured- tagged the response (dependent/outcome) variable.</p>
+<p>Recall that this model makes assumption- normality, homogeneity of variance and independence. It is also important to note that, if the assumption is not met, an equivalent non-parametric test would be appropiate (e.g.- Mann-Whitney test or Wilcoxon test).</p>
+<p>The question here is: are there differences between the two groups? Specifically, the question we want to ask is: are the means of the two groups different or the same?</p>
+<p>In other words,</p>
+<p><span class="math display">\[
+H_0 = \mu_1 = \mu_2 \hspace 2ex or \hspace3ex H_a = \mu_1 \neq \mu_2
+\]</span></p>
+<p>As such, for this stated model (and assuming the <span class="math display">\[H_0\]</span> is true), then the <em>t</em> test statistic should follow a <em>t</em> distribution with degrees of freedom <span class="math display">\[ n_1 \hspace1ex + n_2 \hspace1ex -2\]</span>.</p>
+<p>Example 2-</p>
+<p>In our sample dataset, students reported their normal time to run a mile, and whether (or not) they were an athlete. Now, we would like to know if the average time to run a mile is different for athletes versus non-athletes. This involves testing whether the sample means for mile time among athletes and non-athletes are statistically different (and by extension, inferring whether the means for mile times in the population are significantly different between these two groups).</p>
+<p>For this problem, we can use a two-sample (Independent Samples) <em>t</em> Test to compare the mean mile time for athletes and non-athletes.</p>
+<p><span class="math inline">\(H_o\)</span> : the mean of non-athlete - mean of athlete = 0</p>
+<p><span class="math inline">\(H_a\)</span> = the mean of non-athlete - mean of athlete <span class="math display">\[\neq\]</span> 0</p>
+<p><strong><em>Do it in SPSS.</em></strong></p>
+<p>For this, we will use two variables: Athlete and MileMinDur. The variable Athlete has values of either "0" (non-athlete) or “1” (athlete). It will function as the independent variable in this T test. The variable MileMinDur is a numeric duration variable (h:mm:ss), and it will function as the dependent variable.</p>
+<p>To do it in SPSS, click&nbsp;<strong>Analyze &gt; Compare Means &gt; Independent-Samples T Test</strong>.</p>
+<p>The Independent-Samples (two sample) t-Test window opens where you can specify the variables to be used in the analysis. All of the variables will appear here on the left side. Like the othe time, you can move variables to the right by selecting them and clicking the blue arrow buttons. You can move a variable(s) to either of two areas: <strong>Grouping Variable</strong> or <strong>Test Variable(s)</strong>.</p>
+<p>The:</p>
+<ul>
+<li><p><strong>Test Variable(s)=</strong> response/dependent variable(s). This is the continuous variable whose means we want to compare between the two groups. You can also run multiple <em>t</em> tests simultaneously by selecting more than one test variable.</p></li>
+<li><p><strong>Grouping Variable = explanatory/</strong> independent variable. The categories (or groups) of the independent variable will define which samples will be compared in the <em>t</em> test. This must have at least two categories (groups). Although this may have more than two categories, a <em>t</em> test can only compare two groups, so you will need to specify which two groups to compare (if it’s more than two, then you look at multi-factorial ANOVA, for example). You can also use a continuous variable by specifying a cut point to create two groups (i.e., values at or above the cut point and values below the cut point).</p></li>
+<li><p><strong>Define Groups</strong>: Click <strong>Define Groups</strong> to define the category indicators (groups) to use in the <em>t</em> test. If the button is not active, make sure that you have already moved your independent variable to the right in the <strong>Grouping Variable</strong> field. You must define the categories of your grouping variable before you can run the Independent Samples <em>t</em> Test procedure.</p></li>
+<li><p><strong>Options:</strong> The Options section is where you can set your confidence level for the confidence interval for the mean difference, and specify how SPSS should handle missing values.</p></li>
+</ul>
+<p>Once you’re done, click <strong>OK</strong> to run the Independent Samples <em>t</em> Test, or click <strong>Paste</strong> to have the syntax corresponding to your specified settings written to an open syntax window. (If you do not have a syntax window open, a new window will pop up).</p>
+<p><strong>Result</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/two-sample_output_1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>Again, two sections appear in the output:</p>
+<p>1) <strong>Group Statistics</strong> which provide basic information about our comparisons- such as the sample size, mean, sd and standard error for mile times by group. From the result, we can see that there are 166 athletes and 226 non-athletes. The mean mile time for athletes is 6 minutes 51 seconds, and the mean mile time for non-athletes is 9 minutes 6 seconds.</p>
+<p>2) <strong>Independent Samples Test</strong> displays the results most relevant to the two-Samples <em>t</em> Test. There are two parts that provide different pieces of information:</p>
+<ul>
+<li><p>Levene's Test for Equality of Variances - <em>F</em> is the test statistic of Levene’s test and <em>Sig.</em> is the p-value corresponding to this test statistic. From the result, we can see the p-value is so low. So, we have evidence to reject the null hypothesis. So, we can conclude that the variance in mile time of athletes is significantly different than that of non-athletes variance. This imply that, we should observe the <strong>the “Equal variances not assumed” row for the <em>t</em> test (and corresponding confidence interval) results.</strong></p></li>
+<li><p>t-test for Equality of Means- provides the results for the actual Independent Samples <em>t</em> Test.</p></li>
+</ul>
+<p><strong>Interpretation</strong></p>
+<p>Given that <em>p</em> &lt; .001 is less than significance level of <em>α</em> = 0.05 (our preferred level), we have evidence to reject the null hypothesis, and conclude that the that the mean mile time for athletes and non-athletes is significantly different.</p>
+<p>Therefore, we can say that:</p>
+<ul>
+<li><p>There was a significant difference in mean mile time between non-athletes and athletes ( <span class="math display">\[t_{315.846}\]</span> = 15.047, <em>p</em> &lt; .001).</p></li>
+<li><p>The average mile time for athletes was 2 minutes and 14 seconds lower than the average mile time for non-athletes.</p></li>
+</ul>
+<p>## Analysis of Variance (ANOVA)</p>
+<p><strong>One-Way ANOVA</strong></p>
+<p>ANOVA is a parametric test and simply an extension of two-samples t-test. By Parametric, I mean it make assumptions regarding the shape of the population. Such assumption includes normal distribution in each factor level, commonly refers to as a “bell-shaped” curve, homogeneity (equal variance) and that the observations are independent. Basically, in your research or more broadly, statistics, you often hear or conduct one or two way ANOVA. What this means is about the factor in question (the number of predictors/explanatory/independent variables). In one-way ANOVA,you only have one independent (factor) variable and in a two-way ANOVA, you have two. We shall see examples below.</p>
+<p>Like t-test, when conducting ANOVA, we need to set up hypothesis. Basically, you have either <span class="math display">\[H_0\]</span> (null) or <span class="math display">\[H_a\]</span> (Alternate hypothesis). Usually, your <span class="math display">\[H_0\]</span> implies there is no difference in the mean of your groups. Simply put, your observations comes from populations with the same variance (homoscedastic). <span class="math display">\[H_a\]</span> on the other hand states there is a difference (heteroscedastic).</p>
+<p>To test for this assumption of homoscedasticity, we can use the Levene’s test (see below). N.B: if your <span class="math display">\[H_0\]</span> is rejected, you should not proceed with the standard ANOVA test- perhaps consider the equivalent non-parametric test (e.g., Kruskal-Wallis test).</p>
+<p>Ideally, you should state this out explicitly, such as below:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#H0: there is no mean difference in the observation under consideration</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">#HA: there is a significant difference. </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Let’s quickly demonstrate this with data</p>
+<p>We shall be using the Circadian data. So, let’s load the data.</p>
+<p>For quick context, the data is about jet lag and adjusting to a different time zone. Campbell and Murphy (1998) claimed people adjust to their new time zone once the light reset their internal, circadian clock. Wright and Czeisler 2002 revisited this study and measured the circadian rhythm of melatonin production. They subjected 22 people to random treatments; control, knees only and eyes. Please read more on this paper online or attached pdf (Wright and Czeisler 2002).</p>
+<p>So for our analysis, we want to compare phase shifts in the circadian rhytm of melatonin productions in participants given another light treatments.</p>
+<p><strong>Note-</strong> ANOVA <em>is</em> a <strong>linear regression</strong> BUT the predictor variables are <em>categorical</em> instead of being <em>continuous</em>. Also, rather than estimating the <em>slope</em> (in the case of regression), <strong>with ANOVA you obtain an estimate of the response variable for each independent variable category.</strong></p>
+<p>Now, let’s do this in SPSS</p>
+<ol type="1">
+<li><p>Click&nbsp;<strong>Analyze &gt; Compare Means &gt; One-Way ANOVA</strong>.</p></li>
+<li><p>Add the variable Shift to the <strong>Dependent List</strong> box, and add the variable treatment to the <strong>Factor</strong> box.</p></li>
+<li><p>Click <strong>Options</strong>. Check the box for <strong>Homogeneity of Variance</strong>, then click <strong>Continue</strong>.</p></li>
+<li><p>Click <strong>OK</strong> when finished.</p></li>
+</ol>
+<p>Output for the analysis will display in the <strong><em>Output Viewer</em></strong> window.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/ANOVA_Output.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<pre><code>
+
+From the levene test, we can see that the P value is &gt; 0.05 (0.85), there is no evidence to reject the H0 (they have the same variance). So, we can proceed with ANOVA</code></pre>
+<p><strong>Normality test</strong></p>
+<p>From the Shapiro normality test, the P-value = 0.813, which is greater than the chosen P-value (0.05) and therefore, we have strong evidence to conclude that this data comes from a normal population, as such normality assumption is met.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Shapiro_wilk.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>Lastly,</p>
+<p>Since the ANOVA test is significant, you may want to compute the Tukey test to check for pairwise-comparison between the means of groups</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Tukey_test.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>You can see that both eyes-control and knee-eyes are both significant (check the p-value)</p>
+<pre><code>                   diff        lwr        upr     p adj
+## eyes-control -1.24267857 -2.1682364 -0.3171207 0.0078656
+## knee-control -0.02696429 -0.9525222  0.8985936 0.9969851
+## knee-eyes     1.21571429  0.2598022  2.1716263 0.0116776</code></pre>
+<p><strong>Which test should I use for my data?</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/What test should I use for my data.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="section" class="level4">
+<h4 class="anchored" data-anchor-id="section"></h4>
+</section>
 </section>
 <section id="chapter-3-" class="level1">
 <h1>Chapter 3-</h1>
