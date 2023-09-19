@@ -39,7 +39,7 @@ There are several software available for statistical analysis. For this course, 
 -   Julia
 
 |                    |                  SPSS                  |                 STATA                  |                  SAS                   |                                R/R-Studio                                |                             Python                             |               Julia                |
-|--------------------|:--------------------------------------:|:--------------------------------------:|:--------------------------------------:|:------------------------------------------------------------------------:|:--------------------------------------------------------------:|:----------------------------------:|
+|-----------|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|
 | Price              | Free trial (paid subscription/license) | Free trial (paid subscription/license) | Free trial (paid subscription/license) |                    FREE, Open-Source (non-commercial)                    |                       FREE, Open-Source                        |            Open-Source             |
 | Interface          |     Click, Drag and Drop + Syntax      | Drag and Drop, Scripts, User-friendly  |             User-friendly              |                              User-friendly                               |                         User-friendly                          |           User-friendly            |
 | Data Visualization |      Basic plots, charts, graphs       |         Plots, charts, graphs          |        Simple and complex plots        |                  Plots, Graphs- simple, complex- GGplot                  |                         Plots, Graphs                          |           Plots, Graphs            |
@@ -182,6 +182,306 @@ From there, you can click on the "scale", modify and apply it. Close the box and
 
 2.  Plot histograms of *Healthy life expectancy at birth* . Looking at the mean, median, and mode, what do they indicate about the shape of the distribution? Can you verify that by looking at the histogram? How does the shape of this distribution compare to the normal (Gaussian) distribution superimposed over it?
 
-# Chapter 2-
+## Chapter 2- T-test and Analysis of Variance 
+
+#### Mean Confidence
+
+Last week, we examined (among other things) the mean, median, mode and standard deviation. Also, we mentioned how the mean was representative of the data we looked at. Recall, the mean is about central tendency (where you have most of the data under the curve) and the standard deviation is about the variance.
+
+Now (with respect to last week example), imagine I only told you that the sample mean = 11.44 (and no other information about the estimates/data). The next question here should be how "confident" we are that most of the number will be close to "11.44". Specifically, one would be curious about the sample variation and how different they are from the sample mean (11.44). This implies that the mean alone doesn't tell the full story about how well it represent the data. It could be either representative of the sample (assuming standard deviation is small) or non-representative (if standard deviation is large). So, in order to be "confident" about how well mean represent the data, one need to know the standard deviation.
+
+*How can we relate the mean and the standard deviation together, to give us a new number that tells us about the mean confidence?*
+
+Thus, one could say the
+
+$$
+confidence = \dfrac {mean} {standard \hspace1ex deviation}
+$$
+
+The lower the standard deviation, the more confident we would be in the mean representation (because the value of confidence will be big). This confidence is very useful in the sense that it tells us about the ratio between what we think about our sample (the mean), and the variability in our sample (the standard deviation). In fact, this is the basic formula for the **t-test**!
+
+$$
+t =  \dfrac {measure \hspace1ex of \hspace1ex effect} {measure \hspace1ex of \hspace1ex error}
+$$
+
+#### T-test
+
+Generally, t-test is used to compare the differences in mean scores of (continuous) normally distributed data and used in hypothesis testing. Basically, you'd have to set a null ($H_o$) hypothesis and alternate ($H_a$)) hypothesis.
+
+$H_o$ = no effective difference between the observed sample mean & the (hypothesized) population mean--- simply put, *difference in group means is zero* and any measured difference is due only to "chance".
+
+$H_a$ = difference in group means is different from zero (i.e. there are differences between the observed sample mean and the population mean).
+
+A student *t*-test can be either one or two-sided (also termed two-tailed). A one-sided test shows whether the observed mean is smaller or larger than the population mean and two-tailed t-test imply that the means are not equivalent. Also, the "t" test statistic is then calculated. Simply put, you reject the null hypothesis of your t-test if the observed *t*-statistic is more extreme than the **critical value** determined by the appropriate reference distribution. Where the appropriate reference distribution for the *t*-statistic is the *t* distribution. The critical value depends on the significance level of the test (the probability of erroneously rejecting the null hypothesis).
+
+**One-sample t-test**
+
+This is used to estimate the probability that your sample came from a specific population. Specifically, one sample t-test can be used to determine whether your sample mean, could have come from a paricular population having a specific mean. Technically, it uses the population known parameter, like the mean of the population and the standard deviation of the population. However, most times you don\'t know those parameters of the population! So, you have to estimate them from your sample.
+
+Recall from the formula of t-test we said earlier,
+
+$$
+t =  \dfrac {measure \hspace1ex of \hspace1ex effect} {measure \hspace1ex of \hspace1ex error}
+
+$$
+
+So,
+
+$$
+t =  \dfrac {mean \hspace1ex difference} {standard \hspace1ex error \hspace1ex of \hspace1ex mean}
+$$
+
+Where the $$
+Mean \hspace1ex difference =  sample \hspace1ex mean -  population \hspace1ex mean
+$$
+
+Some points/assumptions here.
+
+1.  Continuous data.
+
+2.  data should be a random sample and come from a
+
+3.  normal population (normal distribution)
+
+4.  Independent (values are not related to one another).
+
+5.  No outliers.
+
+6.  homoscedastic- homogeneity of variance
+
+**Meaning of this "t"**
+
+Put simply, *t* only tells us about the level of confidence in our data and nothing more. It is a property of the data and calculated by dividing the mean difference with the standard error of the sample.
+
+$$
+Standard \hspace1ex error \hspace1ex of \hspace1ex Mean =  \dfrac {standard \hspace1ex deviation}  {N}
+$$
+
+Take for example, your sample mean is 10 and you want to know if it came from a population also with mean of 10. Apparently, In this case, your *t* would be zero (10-10). This means there's no difference between your sample mean and population mean. Now, imagine you resample and your mean is now 12 (because the sample mean may not necessarily be the same every time you sample), the value of *t* would clearly be 2 (12-10 = 2). However,it is also worth noting that the direction of the sign will depend on the estimated standard error. Which means, If the standard error of the sample is positive, then t could be positive (and negative if otherwise). So, if the standard error is smaller, the t gets bigger and thus, we could be more confident in the mean difference.
+
+Now, let's practice this using data
+
+#### One-Sample t-test in SPSS
+
+The link to download the data for this example can be found [here](https://drive.google.com/file/d/1AlSe-sNL1ZArOd79SuSiyvCtgs8xPrU8/view?usp=sharing).
+
+It has been reported that the mean height of U.S. adults of age \>= 20 is about 66.5 inches (63.8 for females and 69.3 for males)- [reported by CDC](https://www.cdc.gov/nchs/data/nhsr/nhsr122-508.pdf). In this example data, we have a sample of over 400 college students from a college. We are interested in testing if the mean height of students at this particular college is significantly different than 66.5 inches (using a one-sample *t* test).
+
+To start this, we need to state the null and alternative hypotheses:
+
+$H_o$ = the mean height of students in this college = 66.5
+
+$H_a$ = the mean height of students in this college is not equal to 66.5
+
+But before we move on, it maybe good to do a quick **Exploratory Data Analysis (EDA)**
+
+For this example, we will use the *Height* variable (a continuous variable representing each respondent\'s height in inches). The heights shows a range of values from 55.00 to 84.41 (click on **Analyze** \> **Descriptive** **Statistics** \> **Descriptives**- check the min and max value to see that).
+
+Also, let's create a histogram of the data so we can get an idea of the distribution, and to see if our hypothesized mean (test value) is near our sample mean. To do this, you can click **Graphs \> Histogram**. Move variable Height to the Variable dialog box, then click **OK**.
+
+![](images/Hist_1.png){fig-align="center"}
+
+From the plot, we can see that height is relatively symmetrically distributed about the mean (although there is a slightly long tail towards the right). The reference lines indicate that sample mean is slightly greater than the hypothesized mean (but not so much). This is a clue that the result of t-test may be significant, but let's run it and see.
+
+To do this in SPSS, you can click on ***Analyze \> Compare Means \> One-Sample T Test**.* Move the variable *Height* to the **Test Variable(s)** area.
+
+![](images/On-sample_ttest_1.png){fig-align="center"}
+
+Ideally, the One-Sample T Test window should open and you can specify the variables to be used in the analysis. Like last week example (if you look at the left), all of the variables in your dataset will appear in the list on the left side. You can the drag variables of interest to the **Test Variable(s)** area by selecting them in the list and click the move arrow button. In the **Test Value** field, enter 66.5.
+
+![](images/one sample t-test.png){fig-align="center"}
+
+**Test Variable(s):** The variable you want to compare its mean to the test value (hypothesized population mean). You can also run multiple One Sample *t* Tests simultaneously if you select more than one test variable. Each variable will be compared to the same Test Value. 
+
+**Test Value:** The (hypothesized) population mean against which you will compare your test variable(s).
+
+**Estimate effect sizes:** This is optional but If checked, it will print effect size statistics \-- specifically, the Cohen's *d* \-- for the test(s). (Note: If you do not see this option in your own SPSS, it might be that you're using the old version of SPSS).
+
+Lastly, if you click on ***Options,***it will open a window where you can specify the **Confidence Interval Percentage** and how the test should treat **Missing Values** (i.e., **Exclude cases analysis by analysis** or **Exclude cases listwise**). Click **Continue**.
+
+Once you're done, you can click **OK** to run the One Sample *t* Test.
+
+See below for the output:
+
+![](images/Output_1.png){fig-align="center"}
+
+Two sections appear in the one-sample t-test output: **One-Sample Statistics** and **One-Sample Test**. The first section, **One-Sample Statistics**, provides general information about the "Height"- including the valid (nonmissing) sample size (*n- 408*), mean (68.0 3inches), standard deviation, and standard error.
+
+*The second section, **One-Sample Test**, displays the results most relevant to the One Sample t Test.* 
+
+1.  **Test Value**: The same number we entered as the test value above.
+2.  **t Statistic**: The "t" test statistic of the one-sample *t* test. From the result above, we can see that *t* = 5.810. Recall, like we described above, *t* is calculated by dividing the mean difference by the standard error of the sample.
+3.  **Mean Difference**: This represent the difference between the "observed" sample mean and the "expected" mean (test value). The sign of the mean difference corresponds to the sign of the *t* value. The positive *t* value (in this case) denotes that the mean height of the sample is \> than the test (hypothesized) value (66.5).
+4.  **df**: The degrees of freedom. For a one-sample *t* test, df = *n* - 1; so here, df = 408 - 1 = 407.
+5.  **Significance** (One-Sided p and Two-Sided p): The p-values of the possible one-sided alternative hypotheses (mean height \> 66.5) and two-sided alternative hypothesis (mean height ≠ 66.5), respectively. We were only interested in the two-sided alternative hypothesis, based on our hypothesis.
+6.  **Confidence Interval for the Difference**: The confidence interval for the difference between the our chosen test value and the sample mean.
+
+**Interpretation**
+
+Recall from our hypothesis above, the test value was 66.5 inches (which represent the average adult height in the U.S). However, from our result, since p \< 0.001 (significant across all conventional levels of significance), we have evidence to reject the null hypothesis that the mean height of students in that particular college is 66.5. Thus, we can conclude that the mean height of students in that college is significantly different than 66.5 inches.
+
+In other words, we can say:
+
+-   There is a significant difference in the mean height of the students in that college and the overall adult population in the U.S. (*p* \< .001).
+
+    and
+
+-   The average students height of this college is about 1.53 inches taller than the average U.S. adult population (95% CI \[1.013, 2.050\]).
+
+#### Two Sample t-Test (Independent Sample)
+
+In independent sample (two sample t-Test), there is a single factor (explanatory) variable with two levels which split the subjects into two groups. Often, one level is considered the **control**, while the other is the **treatment**. Then, the subjects will be randomly assigned to one of the two groups. Following the assignment to a group, each subject has some quantity measured- tagged the response (dependent/outcome) variable.
+
+Recall that this model makes assumption- normality, homogeneity of variance and independence. It is also important to note that, if the assumption is not met, an equivalent non-parametric test would be appropiate (e.g.- Mann-Whitney test or Wilcoxon test).
+
+The question here is: are there differences between the two groups? Specifically, the question we want to ask is: are the means of the two groups different or the same?
+
+In other words,
+
+$$
+H_0 = \mu_1 = \mu_2 \hspace 2ex or \hspace3ex H_a = \mu_1 \neq \mu_2
+$$
+
+As such, for this stated model (and assuming the $$H_0$$ is true), then the *t* test statistic should follow a *t* distribution with degrees of freedom $$ n_1 \hspace1ex + n_2 \hspace1ex -2$$.
+
+Example 2-
+
+In our sample dataset, students reported their normal time to run a mile, and whether (or not) they were an athlete. Now, we would like to know if the average time to run a mile is different for athletes versus non-athletes. This involves testing whether the sample means for mile time among athletes and non-athletes are statistically different (and by extension, inferring whether the means for mile times in the population are significantly different between these two groups).
+
+For this problem, we can use a two-sample (Independent Samples) *t* Test to compare the mean mile time for athletes and non-athletes.
+
+$H_o$ : the mean of non-athlete - mean of athlete = 0
+
+$H_a$ = the mean of non-athlete - mean of athlete $$\neq$$ 0
+
+***Do it in SPSS.***
+
+For this, we will use two variables: Athlete and MileMinDur. The variable Athlete has values of either \"0\" (non-athlete) or "1" (athlete). It will function as the independent variable in this T test. The variable MileMinDur is a numeric duration variable (h:mm:ss), and it will function as the dependent variable.
+
+To do it in SPSS, click **Analyze \> Compare Means \> Independent-Samples T Test**.
+
+The Independent-Samples (two sample) t-Test window opens where you can specify the variables to be used in the analysis. All of the variables will appear here on the left side. Like the othe time, you can move variables to the right by selecting them and clicking the blue arrow buttons. You can move a variable(s) to either of two areas: **Grouping Variable** or **Test Variable(s)**.
+
+The:
+
+-   **Test Variable(s)=** response/dependent variable(s). This is the continuous variable whose means we want to compare between the two groups. You can also run multiple *t* tests simultaneously by selecting more than one test variable.
+
+-   **Grouping Variable = explanatory/** independent variable. The categories (or groups) of the independent variable will define which samples will be compared in the *t* test. This must have at least two categories (groups). Although this may have more than two categories, a *t* test can only compare two groups, so you will need to specify which two groups to compare (if it's more than two, then you look at multi-factorial ANOVA, for example). You can also use a continuous variable by specifying a cut point to create two groups (i.e., values at or above the cut point and values below the cut point).
+
+-   **Define Groups**: Click **Define Groups** to define the category indicators (groups) to use in the *t* test. If the button is not active, make sure that you have already moved your independent variable to the right in the **Grouping Variable** field. You must define the categories of your grouping variable before you can run the Independent Samples *t* Test procedure.
+
+-   **Options:** The Options section is where you can set your confidence level for the confidence interval for the mean difference, and specify how SPSS should handle missing values.
+
+Once you're done, click **OK** to run the Independent Samples *t* Test, or click **Paste** to have the syntax corresponding to your specified settings written to an open syntax window. (If you do not have a syntax window open, a new window will pop up).
+
+**Result**
+
+![](images/two-sample_output_1.png){fig-align="center"}
+
+Again, two sections appear in the output:
+
+1\) **Group Statistics** which provide basic information about our comparisons- such as the sample size, mean, sd and standard error for mile times by group. From the result, we can see that there are 166 athletes and 226 non-athletes. The mean mile time for athletes is 6 minutes 51 seconds, and the mean mile time for non-athletes is 9 minutes 6 seconds.
+
+2\) **Independent Samples Test** displays the results most relevant to the two-Samples *t* Test. There are two parts that provide different pieces of information:
+
+-   Levene\'s Test for Equality of Variances - *F* is the test statistic of Levene's test and *Sig.* is the p-value corresponding to this test statistic. From the result, we can see the p-value is so low. So, we have evidence to reject the null hypothesis. So, we can conclude that the variance in mile time of athletes is significantly different than that of non-athletes variance. This imply that, we should observe the **the "Equal variances not assumed" row for the *t* test (and corresponding confidence interval) results.**
+
+-   t-test for Equality of Means- provides the results for the actual Independent Samples *t* Test.
+
+**Interpretation**
+
+Given that *p* \< .001 is less than significance level of *α* = 0.05 (our preferred level), we have evidence to reject the null hypothesis, and conclude that the that the mean mile time for athletes and non-athletes is significantly different.
+
+Therefore, we can say that:
+
+-   There was a significant difference in mean mile time between non-athletes and athletes ( $$t_{315.846}$$ = 15.047, *p* \< .001).
+
+-   The average mile time for athletes was 2 minutes and 14 seconds lower than the average mile time for non-athletes.
+
+\## Analysis of Variance (ANOVA)
+
+**One-Way ANOVA**
+
+ANOVA is a parametric test and simply an extension of two-samples t-test. By Parametric, I mean it make assumptions regarding the shape of the population. Such assumption includes normal distribution in each factor level, commonly refers to as a "bell-shaped" curve, homogeneity (equal variance) and that the observations are independent. Basically, in your research or more broadly, statistics, you often hear or conduct one or two way ANOVA. What this means is about the factor in question (the number of predictors/explanatory/independent variables). In one-way ANOVA,you only have one independent (factor) variable and in a two-way ANOVA, you have two. We shall see examples below. 
+
+
+
+Like t-test, when conducting ANOVA, we need to set up hypothesis. Basically, you have either $$H_0$$ (null) or $$H_a$$ (Alternate hypothesis). Usually, your $$H_0$$ implies there is no difference in the mean of your groups. Simply put, your observations comes from populations with the same variance (homoscedastic). $$H_a$$ on the other hand states there is a difference (heteroscedastic).
+
+To test for this assumption of homoscedasticity, we can use the Levene's test (see below). N.B: if your $$H_0$$ is rejected, you should not proceed with the standard ANOVA test- perhaps consider the equivalent non-parametric test (e.g., Kruskal-Wallis test).
+
+Ideally, you should state this out explicitly, such as below:
+
+
+
+```{r}
+
+#H0: there is no mean difference in the observation under consideration
+
+
+#HA: there is a significant difference. 
+
+```
+
+Let's quickly demonstrate this with data
+
+We shall be using the Circadian data. So, let's load the data. 
+
+For quick context, the data is about jet lag and adjusting to a different time zone. Campbell and Murphy (1998) claimed people adjust to their new time zone once the light reset their internal, circadian clock. Wright and Czeisler 2002 revisited this study and measured the circadian rhythm of melatonin production. They subjected 22 people to random treatments; control, knees only and eyes. Please read more on this paper online or attached pdf (Wright and Czeisler 2002).
+
+
+So for our analysis, we want to compare phase shifts in the circadian rhytm of melatonin productions in participants given another light treatments.
+
+
+
+
+**Note-** ANOVA *is* a **linear regression** BUT the predictor variables are *categorical* instead of being *continuous*. Also, rather than estimating the *slope* (in the case of regression), **with ANOVA you obtain an estimate of the response variable for each independent variable category.**
+
+Now, let's do this in SPSS
+
+1.  Click **Analyze \> Compare Means \> One-Way ANOVA**.
+
+2.  Add the variable Shift to the **Dependent List** box, and add the variable treatment to the **Factor** box.
+
+3.  Click **Options**. Check the box for **Homogeneity of Variance**, then click **Continue**.
+
+4.  Click **OK** when finished.
+
+Output for the analysis will display in the ***Output Viewer*** window.
+
+![](images/ANOVA_Output.png){fig-align="center"}
+
+```         
+
+
+From the levene test, we can see that the P value is > 0.05 (0.85), there is no evidence to reject the H0 (they have the same variance). So, we can proceed with ANOVA
+```
+
+**Normality test**
+
+From the Shapiro normality test, the P-value = 0.813, which is greater than the chosen P-value (0.05) and therefore, we have strong evidence to conclude that this data comes from a normal population, as such normality assumption is met.
+
+![](images/Shapiro_wilk.png){fig-align="center"}
+
+Lastly,
+
+Since the ANOVA test is significant, you may want to compute the Tukey test to check for pairwise-comparison between the means of groups
+
+![](images/Tukey_test.png){fig-align="center"}
+
+You can see that both eyes-control and knee-eyes are both significant (check the p-value)
+
+```         
+                   diff        lwr        upr     p adj
+## eyes-control -1.24267857 -2.1682364 -0.3171207 0.0078656
+## knee-control -0.02696429 -0.9525222  0.8985936 0.9969851
+## knee-eyes     1.21571429  0.2598022  2.1716263 0.0116776
+```
+
+**Which test should I use for my data?**
+
+![](images/What test should I use for my data.png){fig-align="center"}
+
+#### 
 
 # Chapter 3-
