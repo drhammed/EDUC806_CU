@@ -441,8 +441,7 @@ t =  \dfrac {measure \hspace1ex of \hspace1ex effect} {measure \hspace1ex of \hs
 <p><strong>One-sample t-test</strong></p>
 <p>This is used to estimate the probability that your sample came from a specific population. Specifically, one sample t-test can be used to determine whether your sample mean, could have come from a paricular population having a specific mean. Technically, it uses the population known parameter, like the mean of the population and the standard deviation of the population. However, most times you don't know those parameters of the population! So, you have to estimate them from your sample.</p>
 <p>Recall from the formula of t-test we said earlier,</p>
-<p>$$ t = {measure 1ex of 1ex error}</p>
-<p>$$</p>
+<p><span class="math display">\[t = \frac{{\text{{measure of effect}}}}{{{\text{{measure of error}}}}}\]</span></p>
 <p>So,</p>
 <p><span class="math display">\[
 t =  \dfrac {mean \hspace1ex difference} {standard \hspace1ex error \hspace1ex of \hspace1ex mean}
@@ -461,9 +460,7 @@ Mean \hspace1ex difference =  sample \hspace1ex mean -  population \hspace1ex me
 </ol>
 <p><strong>Meaning of this “t”</strong></p>
 <p>Put simply, <em>t</em> only tells us about the level of confidence in our data and nothing more. It is a property of the data and calculated by dividing the mean difference with the standard error of the sample.</p>
-<p><span class="math display">\[
-Standard \hspace1ex error \hspace1ex of \hspace1ex Mean =  \dfrac {standard \hspace1ex deviation}  {N}
-\]</span></p>
+<p><span class="math display">\[ \text{Standard Error of Mean} = \frac{{\text{{Standard Deviation}}}}{{\sqrt{{\text{{N}}}}}} \]</span></p>
 <p>Take for example, your sample mean is 10 and you want to know if it came from a population also with mean of 10. Apparently, In this case, your <em>t</em> would be zero (10-10). This means there’s no difference between your sample mean and population mean. Now, imagine you resample and your mean is now 12 (because the sample mean may not necessarily be the same every time you sample), the value of <em>t</em> would clearly be 2 (12-10 = 2). However,it is also worth noting that the direction of the sign will depend on the estimated standard error. Which means, If the standard error of the sample is positive, then t could be positive (and negative if otherwise). So, if the standard error is smaller, the t gets bigger and thus, we could be more confident in the mean difference.</p>
 <p>Now, let’s practice this using data</p>
 </section>
