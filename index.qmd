@@ -220,10 +220,7 @@ This is used to estimate the probability that your sample came from a specific p
 
 Recall from the formula of t-test we said earlier,
 
-$$
-t =  \dfrac {measure \hspace1ex of \hspace1ex effect} {measure \hspace1ex of \hspace1ex error}
-
-$$
+$$t = \frac{{\text{{measure of effect}}}}{{{\text{{measure of error}}}}}$$
 
 So,
 
@@ -253,9 +250,7 @@ Some points/assumptions here.
 
 Put simply, *t* only tells us about the level of confidence in our data and nothing more. It is a property of the data and calculated by dividing the mean difference with the standard error of the sample.
 
-$$
-Standard \hspace1ex error \hspace1ex of \hspace1ex Mean =  \dfrac {standard \hspace1ex deviation}  {N}
-$$
+$$ \text{Standard Error of Mean} = \frac{{\text{{Standard Deviation}}}}{{\sqrt{{\text{{N}}}}}} $$
 
 Take for example, your sample mean is 10 and you want to know if it came from a population also with mean of 10. Apparently, In this case, your *t* would be zero (10-10). This means there's no difference between your sample mean and population mean. Now, imagine you resample and your mean is now 12 (because the sample mean may not necessarily be the same every time you sample), the value of *t* would clearly be 2 (12-10 = 2). However,it is also worth noting that the direction of the sign will depend on the estimated standard error. Which means, If the standard error of the sample is positive, then t could be positive (and negative if otherwise). So, if the standard error is smaller, the t gets bigger and thus, we could be more confident in the mean difference.
 
