@@ -347,7 +347,7 @@ For this problem, we can use a two-sample (Independent Samples) *t* Test to comp
 
 $H_o$ : the mean of non-athlete - mean of athlete = 0
 
-$H_a$ = the mean of non-athlete - mean of athlete $$\neq$$ 0
+$$H_a$$ : the mean of non-athlete - mean of athlete $$\neq$$ 0
 
 ***Do it in SPSS.***
 
