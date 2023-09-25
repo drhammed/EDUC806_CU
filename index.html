@@ -618,7 +618,8 @@ H_0 = \mu_1 = \mu_2 \hspace 2ex or \hspace3ex H_a = \mu_1 \neq \mu_2
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">#HA: there is a significant difference. </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Let’s quickly demonstrate this with data</p>
-<p>We shall be using the Circadian data. So, let’s load the data.</p>
+<p>We shall be using the Circadian data. You can download it <a href="https://drive.google.com/file/d/1z0GnAaPwxMgw3lO9G_2mOjyNUEsqwNcd/view?usp=sharing">here</a>.</p>
+<p>So, let’s load the data.</p>
 <p>For quick context, the data is about jet lag and adjusting to a different time zone. Campbell and Murphy (1998) claimed people adjust to their new time zone once the light reset their internal, circadian clock. Wright and Czeisler 2002 revisited this study and measured the circadian rhythm of melatonin production. They subjected 22 people to random treatments; control, knees only and eyes. Please read more on this paper <a href="https://www.science.org/doi/epdf/10.1126/science.1071697">online</a> (Wright and Czeisler 2002).</p>
 <p>So for our analysis, we want to compare phase shifts in the circadian rhytm of melatonin productions in participants given another light treatments.</p>
 <p>Recall we said, ANOVA <em>is</em> a <strong>linear regression</strong> BUT the predictor variables are <em>categorical</em> instead of being <em>continuous</em>. Also, rather than estimating the <em>slope</em> (in the case of regression), <strong>with ANOVA you obtain an estimate (mean) of the response variable for each independent variable category.</strong></p>
@@ -702,8 +703,8 @@ H_0 = \mu_1 = \mu_2 \hspace 2ex or \hspace3ex H_a = \mu_1 \neq \mu_2
 <p>Here, I will use the data from Behmer &amp; Crump (2017) to explain one-factor repeated measures ANOVA.</p>
 <p>In this experiment, Behmer and Crump (2017) recruited 38 subjects to type words presented on a screen as quickly as they could. The independent variable was typing material and it had 3 levels: Normal (5 letter English words), Bigrams (5 letter non-words that have properties like real words), and Random (random 5 letter strings). The authors wanted to know whether reaction time (RT) was different according to the type of word being typed.</p>
 <p>Dependent Variables: There were three dependent variables, that all measured different aspects of typing performance. Reaction times (RTs) were defined as the temporal interval between seeing a stimulus (to type), and then starting to type it (first key press). Inter-keystroke intervals (IKSIs) are the times between each key-press. Last, accuracy was also measured (correct or incorrect key-presses). For this analysis we will use <code>Pure RTs</code> as our one DV.</p>
-<p>Nota bene: This is a repeated measures design because each participant typed letter strings from the word, bigrams, and random conditions.</p>
-<p>Behmer and Crump (2017) conducted a study with 38 participants to investigate the effect of different types of words on their typing performance. Here, the factor variable (“typing material”), had three levels: Random (random 5 letter strings), Normal (5 letter English words), and Bigrams (5 letter non-words similar to real words). The goal here was to determine if reaction time (RT) varied depending on the type of word being typed.</p>
+<p>Note that this is a repeated measures design because each participant typed letter strings from the word, bigrams, and random conditions.</p>
+<p>Behmer and Crump (2017) conducted a study with 38 participants to investigate the effect of different types of words on their typing performance. Here, the factor variable (“typing material”), had three levels: Random (random 5 letter strings), Normal (5 letter English words), and Bigrams (5 letter non-words similar to real words). The goal was to determine if reaction time (RT) varied depending on the type of word being typed.</p>
 <p>The study measured three dependent variables:</p>
 <ol type="1">
 <li>RTs- reaction times- i.e.&nbsp;the time interval between seeing a stimulus and starting to type it.</li>
@@ -712,7 +713,7 @@ H_0 = \mu_1 = \mu_2 \hspace 2ex or \hspace3ex H_a = \mu_1 \neq \mu_2
 </ol>
 <p>It is important to note that this study followed a repeated measures design, as each participant repeatedly typed letter strings from the random, normal and bigrams.</p>
 <p>To do this SPSS,</p>
-<p>Load in the data (download from the Google dive link)</p>
+<p>Load in the data (download from the Google dive <a href="https://drive.google.com/file/d/1GGJIjoVYOSr7qcIGw2bXxskr7eJvC4oj/view?usp=sharing">link</a>)</p>
 <p>Let’s do a quick EDA before we proceed- make a histogram plot to look at our data.</p>
 <p>Remember to do this, you can</p>
 <ol type="1">
@@ -743,7 +744,7 @@ H_0 = \mu_1 = \mu_2 \hspace 2ex or \hspace3ex H_a = \mu_1 \neq \mu_2
 <section id="section-1" class="level4">
 <h4 class="anchored" data-anchor-id="section-1"></h4>
 <p><strong>One-Factor Repeated Measures ANOVA</strong></p>
-<p>To do that, lets work with this data ( the mean we just calculated). See the link here.</p>
+<p>To do that, lets work with this data ( the mean we just calculated). See the link <a href="https://drive.google.com/file/d/1MG4YI8RAdabTe8dQS4Ell2dZyfh3dj59/view?usp=sharing">here</a>.</p>
 <p>Load in the data to SPSS. You may have already noticed that each person's data is contained within a row (38 in total): there are 3 measurements corresponding to all conditions (random, normal and bigrams).</p>
 <p>So, to calculate a One-Factor Repeated Measures ANOVA in SPSS, click on</p>
 <ol type="1">
