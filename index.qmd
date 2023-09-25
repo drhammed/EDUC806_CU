@@ -435,7 +435,7 @@ Department1, 2, and 3 represent indicator variables for each department (value o
 
 ε is the error term (i.e. the unexplained variation in job satisfaction scores).
 
-By fitting this model, we can estimate the mean job satisfaction score for each department, and compare them to see if there are any significant differences. For example, we might find that the estimated mean job satisfaction score for Department 1 is 75, for Department 2 is 80, and for Department 3 is 70. This would suggest that there are significant differences in job satisfaction scores across departments, and we can further investigate why this might be the case.
+By fitting this model, we can estimate the mean job satisfaction score for each department, and compare them to see if there are any significant differences. For example, suppose we find that the estimated mean job satisfaction score for Department 1 = 82, for Department 2 is 64, and for Department 3 = 50. This would suggest that there are significant differences in job satisfaction scores across departments, and we can further investigate why this might be the case.
 
 So, to conclude, *ANOVA is also a linear regression* and even if you run "anova" function on linear model object, you'll most likely get the same p-value. Here is a [link](https://www.theanalysisfactor.com/why-anova-and-linear-regression-are-the-same-analysis/) to an article explaining everything in more details
 
