@@ -510,6 +510,8 @@ From the Shapiro normality test, the P-value = 0.813, which is greater than the 
 
 Looking at the result of ANOVA table and since p is \< our chosen alpha level (0.05), we have evidence to reject the null hypothesis and conclude that there IS a difference somewhere among the treatment groups. Put formally, we conclude that the mean shift time for melatonin production is significantly different for at least one of our treatment groups (*F*~2,\ 19~ = 7.289, *p* \< 0.05). Please note that the ANOVA alone does not specifically tell us which means were different from one another.
 
+![](images/ANOVA_circadian.png){fig-align="center"}
+
 So, to determine that and since the ANOVA test is significant, we would need to do *multiple comparisons* (*post-hoc*) tests.
 
 You may want to compute the Tukey test to check for pairwise-comparison between the means of groups. To do this, run the ANOVA again, but this time, select the "Post Hoc" button and choose Tukey. Your result window will open (and should be similar to the one below)
