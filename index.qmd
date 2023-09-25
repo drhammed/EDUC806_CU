@@ -468,7 +468,9 @@ The hypothesis should Ideally be stated explicitly, such as below:
 
 Let's quickly demonstrate this with data
 
-We shall be using the Circadian data. So, let's load the data.
+We shall be using the Circadian data. You can download it [here](https://drive.google.com/file/d/1z0GnAaPwxMgw3lO9G_2mOjyNUEsqwNcd/view?usp=sharing).
+
+So, let's load the data.
 
 For quick context, the data is about jet lag and adjusting to a different time zone. Campbell and Murphy (1998) claimed people adjust to their new time zone once the light reset their internal, circadian clock. Wright and Czeisler 2002 revisited this study and measured the circadian rhythm of melatonin production. They subjected 22 people to random treatments; control, knees only and eyes. Please read more on this paper [online](https://www.science.org/doi/epdf/10.1126/science.1071697) (Wright and Czeisler 2002).
 
@@ -570,9 +572,9 @@ In this experiment, Behmer and Crump (2017) recruited 38 subjects to type words 
 
 Dependent Variables: There were three dependent variables, that all measured different aspects of typing performance. Reaction times (RTs) were defined as the temporal interval between seeing a stimulus (to type), and then starting to type it (first key press). Inter-keystroke intervals (IKSIs) are the times between each key-press. Last, accuracy was also measured (correct or incorrect key-presses). For this analysis we will use `Pure RTs` as our one DV.
 
-Nota bene: This is a repeated measures design because each participant typed letter strings from the word, bigrams, and random conditions.
+Note that this is a repeated measures design because each participant typed letter strings from the word, bigrams, and random conditions.
 
-Behmer and Crump (2017) conducted a study with 38 participants to investigate the effect of different types of words on their typing performance. Here, the factor variable ("typing material"), had three levels: Random (random 5 letter strings), Normal (5 letter English words), and Bigrams (5 letter non-words similar to real words). The goal here was to determine if reaction time (RT) varied depending on the type of word being typed.
+Behmer and Crump (2017) conducted a study with 38 participants to investigate the effect of different types of words on their typing performance. Here, the factor variable ("typing material"), had three levels: Random (random 5 letter strings), Normal (5 letter English words), and Bigrams (5 letter non-words similar to real words). The goal was to determine if reaction time (RT) varied depending on the type of word being typed.
 
 The study measured three dependent variables:
 
@@ -584,7 +586,7 @@ It is important to note that this study followed a repeated measures design, as 
 
 To do this SPSS,
 
-Load in the data (download from the Google dive link)
+Load in the data (download from the Google dive [link](https://drive.google.com/file/d/1GGJIjoVYOSr7qcIGw2bXxskr7eJvC4oj/view?usp=sharing))
 
 Let's do a quick EDA before we proceed- make a histogram plot to look at our data.
 
@@ -621,7 +623,7 @@ Now, we will Conduct One-Factor Repeated Measures ANOVA on the mean reaction tim
 
 **One-Factor Repeated Measures ANOVA**
 
-To do that, lets work with this data ( the mean we just calculated). See the link here.
+To do that, lets work with this data ( the mean we just calculated). See the link [here](https://drive.google.com/file/d/1MG4YI8RAdabTe8dQS4Ell2dZyfh3dj59/view?usp=sharing).
 
 Load in the data to SPSS. You may have already noticed that each person\'s data is contained within a row (38 in total): there are 3 measurements corresponding to all conditions (random, normal and bigrams).
 
