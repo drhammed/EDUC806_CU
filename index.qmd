@@ -393,7 +393,7 @@ Therefore, we can say that:
 
 -   The average mile time for athletes was 2 minutes and 14 seconds lower than the average mile time for non-athletes.
 
-#### Model terminology
+#### **Model terminology**
 
 Often, we hear different (statistical) terms including linear regression, linear models and ANOVA and sometimes wonder the differences in all of them are. Statistically speaking, they\'re all fundamentally the same thing!
 
