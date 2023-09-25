@@ -413,9 +413,7 @@ X = independent variable (inumber of hours spent studying)
 
 $\beta_0 = \text{intercept (the estimated academic performance when X is 0)}$
 
-$ \beta_1 = \text{slope (the estimated change in academic performance associated with each extra hour of studying per day)}$
-
-$\epsilon = \text{error term (unexplained variation in academic performance)}$
+$\beta_1 = \text{slope (the estimated change in academic performance associated with each extra hour of studying per day)}$
 
 With this linear model, we can then estimate the relationship between the number of hours spent studying and academic performance, and determine whether there is a significant relationship between them. Also, we could use this model to make prediction (for examle, to predict academic performance for different levels of studying time).
 
