@@ -182,7 +182,7 @@ From there, you can click on the "scale", modify and apply it. Close the box and
 
 2.  Plot histograms of *Healthy life expectancy at birth* . Looking at the mean, median, and mode, what do they indicate about the shape of the distribution? Can you verify that by looking at the histogram? How does the shape of this distribution compare to the normal (Gaussian) distribution superimposed over it?
 
-## Chapter 2- T-test and Analysis of Variance 
+## Chapter 2- T-test and Analysis of Variance
 
 #### Mean Confidence
 
@@ -216,7 +216,7 @@ A student *t*-test can be either one or two-sided (also termed two-tailed). A on
 
 **One-sample t-test**
 
-This is used to estimate the probability that your sample came from a specific population. Specifically, one sample t-test can be used to determine whether your sample mean, could have come from a paricular population having a specific mean. Technically, it uses the population known parameter, like the mean of the population and the standard deviation of the population. However, most times you don\'t know those parameters of the population! So, you have to estimate them from your sample.
+This is used to estimate the probability that your sample came from a specific population. Specifically, one sample t-test can be used to determine whether your sample mean, could have come from a paricular population having a specific mean. Technically, it uses the population known parameter, like the mean of the population and the standard deviation of the population. However, most times you don't know those parameters of the population! So, you have to estimate them from your sample.
 
 Recall from the formula of t-test we said earlier,
 
@@ -270,7 +270,7 @@ $H_a$ = the mean height of students in this college is not equal to 66.5
 
 But before we move on, it maybe good to do a quick **Exploratory Data Analysis (EDA)**
 
-For this example, we will use the *Height* variable (a continuous variable representing each respondent\'s height in inches). The heights shows a range of values from 55.00 to 84.41 (click on **Analyze** \> **Descriptive** **Statistics** \> **Descriptives**- check the min and max value to see that).
+For this example, we will use the *Height* variable (a continuous variable representing each respondent's height in inches). The heights shows a range of values from 55.00 to 84.41 (click on **Analyze** \> **Descriptive** **Statistics** \> **Descriptives**- check the min and max value to see that).
 
 Also, let's create a histogram of the data so we can get an idea of the distribution, and to see if our hypothesized mean (test value) is near our sample mean. To do this, you can click **Graphs \> Histogram**. Move variable Height to the Variable dialog box, then click **OK**.
 
@@ -284,7 +284,7 @@ To do this in SPSS, you can click on ***Analyze \> Compare Means \> One-Sample 
 
 Ideally, the One-Sample T Test window should open and you can specify the variables to be used in the analysis. Like last week example (if you look at the left), all of the variables in your dataset will appear in the list on the left side. You can the drag variables of interest to the **Test Variable(s)** area by selecting them in the list and click the move arrow button. In the **Test Value** field, enter 66.5.
 
-![](images/one sample t-test.png){fig-align="center"}
+![](images/one%20sample%20t-test.png){fig-align="center"}
 
 **Test Variable(s):** The variable you want to compare its mean to the test value (hypothesized population mean). You can also run multiple One Sample *t* Tests simultaneously if you select more than one test variable. Each variable will be compared to the same Test Value. 
 
@@ -337,7 +337,7 @@ $$
 H_0 = \mu_1 = \mu_2 \hspace 2ex or \hspace3ex H_a = \mu_1 \neq \mu_2
 $$
 
-As such, for this stated model (and assuming the $$H_0$$ is true), then the *t* test statistic should follow a *t* distribution with degrees of freedom $$ n_1 \hspace1ex + n_2 \hspace1ex -2$$.
+As such, for this stated model (and assuming the null hypothesis is true), then the *t* test statistic should follow a *t* distribution with degrees of freedom $$ n_1 \hspace1ex + n_2 \hspace1ex -2$$
 
 Example 2-
 
@@ -345,13 +345,13 @@ In our sample dataset, students reported their normal time to run a mile, and wh
 
 For this problem, we can use a two-sample (Independent Samples) *t* Test to compare the mean mile time for athletes and non-athletes.
 
-$H_o$ : the mean of non-athlete - mean of athlete = 0
+$$H_o : \text {the mean of non-athlete - mean of athlete} = 0$$
 
-$$H_a$$ : the mean of non-athlete - mean of athlete $$\neq$$ 0
+$$H_a  : \text {the mean of non-athlete - mean of athlete} \neq 0$$
 
 ***Do it in SPSS.***
 
-For this, we will use two variables: Athlete and MileMinDur. The variable Athlete has values of either \"0\" (non-athlete) or "1" (athlete). It will function as the independent variable in this T test. The variable MileMinDur is a numeric duration variable (h:mm:ss), and it will function as the dependent variable.
+For this, we will use two variables: Athlete and MileMinDur. The variable Athlete has values of either "0" (non-athlete) or "1" (athlete). It will function as the independent variable in this T test. The variable MileMinDur is a numeric duration variable (h:mm:ss), and it will function as the dependent variable.
 
 To do it in SPSS, click **Analyze \> Compare Means \> Independent-Samples T Test**.
 
@@ -379,7 +379,7 @@ Again, two sections appear in the output:
 
 2\) **Independent Samples Test** displays the results most relevant to the two-Samples *t* Test. There are two parts that provide different pieces of information:
 
--   Levene\'s Test for Equality of Variances - *F* is the test statistic of Levene's test and *Sig.* is the p-value corresponding to this test statistic. From the result, we can see the p-value is so low. So, we have evidence to reject the null hypothesis. So, we can conclude that the variance in mile time of athletes is significantly different than that of non-athletes variance. This imply that, we should observe the **the "Equal variances not assumed" row for the *t* test (and corresponding confidence interval) results.**
+-   Levene's Test for Equality of Variances - *F* is the test statistic of Levene's test and *Sig.* is the p-value corresponding to this test statistic. From the result, we can see the p-value is so low. So, we have evidence to reject the null hypothesis. So, we can conclude that the variance in mile time of athletes is significantly different than that of non-athletes variance. This imply that, we should observe the **the "Equal variances not assumed" row for the *t* test (and corresponding confidence interval) results.**
 
 -   t-test for Equality of Means- provides the results for the actual Independent Samples *t* Test.
 
@@ -389,25 +389,75 @@ Given that *p* \< .001 is less than significance level of *α* = 0.05 (our prefe
 
 Therefore, we can say that:
 
--   There was a significant difference in mean mile time between non-athletes and athletes ( $$t_{315.846}$$ = 15.047, *p* \< .001).
+-   There was a significant difference in mean mile time between non-athletes and athletes $(t_{315.846} = = 15.047, p < .001)$ .
 
 -   The average mile time for athletes was 2 minutes and 14 seconds lower than the average mile time for non-athletes.
 
-\## Analysis of Variance (ANOVA)
+#### Model terminology
 
-**One-Way ANOVA**
+Often, we hear different (statistical) terms including linear regression, linear models and ANOVA and sometimes wonder the differences in all of them are. Statistically speaking, they\'re all fundamentally the same thing!
 
-ANOVA is a parametric test and simply an extension of two-samples t-test. By Parametric, I mean it make assumptions regarding the shape of the population. Such assumption includes normal distribution in each factor level, commonly refers to as a "bell-shaped" curve, homogeneity (equal variance) and that the observations are independent. Basically, in your research or more broadly, statistics, you often hear or conduct one or two way ANOVA. What this means is about the factor in question (the number of predictors/explanatory/independent variables). In one-way ANOVA,you only have one independent (factor) variable and in a two-way ANOVA, you have two. We shall see examples below. 
+Linear model and Linear regression are just synonyms! People often use either terms when quantifying the effect of a "**continuous"** independent variable on a "**continuous"** dependent (response) variable. For example, one might be interested in saying "For every 1 unit change in X, what is the corresponding change in Y"? What is the change in academic performance for each additional hour of studying per day among high school students? For example, imagine we have data on the number of hours that high school students spend studying each day and their academic performance (e.g. scores), we can use this data to determine the relationship between these two variables. By analyzing the data, we could calculate the change in academic performance for each extra hour of studying per day among the participants.
 
+To do this, we could easily use a linear model to explore the relationship between them and estimate the "slope" of the line that best describes the relationship between the number of hours spent studying (X) and academic performance (Y). The slope of this line would then indicate the change in academic performance associated with each extra hour of studying per day (our research question)
 
+In a simple mathematical equation, we could represent our model as
 
-Like t-test, when conducting ANOVA, we need to set up hypothesis. Basically, you have either $$H_0$$ (null) or $$H_a$$ (Alternate hypothesis). Usually, your $$H_0$$ implies there is no difference in the mean of your groups. Simply put, your observations comes from populations with the same variance (homoscedastic). $$H_a$$ on the other hand states there is a difference (heteroscedastic).
+$$Y = \beta_0 + \beta_1X + \epsilon$$
 
-To test for this assumption of homoscedasticity, we can use the Levene's test (see below). N.B: if your $$H_0$$ is rejected, you should not proceed with the standard ANOVA test- perhaps consider the equivalent non-parametric test (e.g., Kruskal-Wallis test).
+where:
 
-Ideally, you should state this out explicitly, such as below:
+Y = dependent variable (academic performance)
 
+X = independent variable (inumber of hours spent studying)
 
+$\beta_0 = \text{intercept (the estimated academic performance when X is 0)}$
+
+$ \beta_1 = \text{slope (the estimated change in academic performance associated with each extra hour of studying per day)}$
+
+$\epsilon = \text{error term (unexplained variation in academic performance)}$
+
+With this linear model, we can then estimate the relationship between the number of hours spent studying and academic performance, and determine whether there is a significant relationship between them. Also, we could use this model to make prediction (for examle, to predict academic performance for different levels of studying time).
+
+However **ANOVA** (Analysis of Variance), is usually used when quantifying the effect of a "**discrete (or categorical)"** independent variable on a "**continuous"** dependent variable. Imagine we have data on job satisfaction scores for employees from three different departments of company A, and we want to estimate how the mean job satisfaction score varies per department. We can use ANOVA (*a linear model*) to estimate the **mean job satisfaction score** for each department.
+
+We can define our model to be:
+
+$$ \text{Job Satisfaction} = \mu + \beta_1Department_1 + \beta_2Department_2 + \beta_3Department_3 + \epsilon$$
+
+where:
+
+Job Satisfaction is the Y- dependent variable (*what we want to predict*)
+
+Department1, 2, and 3 represent indicator variables for each department (value of 0 and 1. 1 if the employee belongs to that department, and 0 otherwise).
+
+μ = intercept- i.e overall mean job satisfaction score or better put, the estimated mean job satisfaction score when all departments are 0 (i.e., the reference category). This intercept captures the baseline level of job satisfaction that is not attributable to any specific department.
+
+**β**1, 2, and 3 = the coefficients (i.e. the estimated mean difference in job satisfaction score between each department and the reference department)
+
+ε is the error term (i.e. the unexplained variation in job satisfaction scores).
+
+By fitting this model, we can estimate the mean job satisfaction score for each department, and compare them to see if there are any significant differences. For example, we might find that the estimated mean job satisfaction score for Department 1 is 75, for Department 2 is 80, and for Department 3 is 70. This would suggest that there are significant differences in job satisfaction scores across departments, and we can further investigate why this might be the case.
+
+So, to conclude, *ANOVA is also a linear regression* and even if you run "anova" function on linear model object, you'll most likely get the same p-value. Here is a [link](https://www.theanalysisfactor.com/why-anova-and-linear-regression-are-the-same-analysis/) to an article explaining everything in more details
+
+#### **Which test should I use for my data?**
+
+![](images/What%20test%20should%20I%20use%20for%20my%20data.png){fig-align="center"}
+
+#### **One-Way ANOVA**
+
+ANOVA is a parametric test and simply an extension of two-samples t-test. By Parametric, I mean it make assumptions regarding the shape of the population. Such assumption includes normal distribution in each factor level, commonly refers to as a "bell-shaped" curve, homogeneity (equal variance) and that the observations are independent. Basically, in your research or more broadly, statistics, you often hear or conduct one or two way ANOVA. What this means is about the factor in question (the number of predictors/explanatory/independent variables). In one-way ANOVA,you only have one independent (factor) variable and in a two-way ANOVA, you have two. We shall see examples below.
+
+Like t-test, when conducting ANOVA, we need to set up hypothesis. Basically, you have either $H_0 (null) \hspace1ex or \hspace1ex H_a (\text{alternate hypothesis})$
+
+Usually, your $H_0 = \text{no difference in the mean of your groups. Simply put, your observations comes from populations with the same variance (homoscedastic). }$ $H_a = \text{there is a difference (heteroscedastic).}$
+
+To test for this assumption of homoscedasticity, we can use the Levene's test (see below).
+
+N.B: if your null hypothesis is rejected, you should not proceed with the standard ANOVA test- perhaps consider the equivalent non-parametric test (e.g., Kruskal-Wallis test).
+
+The hypothesis should Ideally be stated explicitly, such as below:
 
 ```{r}
 
@@ -420,63 +470,200 @@ Ideally, you should state this out explicitly, such as below:
 
 Let's quickly demonstrate this with data
 
-We shall be using the Circadian data. So, let's load the data. 
+We shall be using the Circadian data. So, let's load the data.
 
-For quick context, the data is about jet lag and adjusting to a different time zone. Campbell and Murphy (1998) claimed people adjust to their new time zone once the light reset their internal, circadian clock. Wright and Czeisler 2002 revisited this study and measured the circadian rhythm of melatonin production. They subjected 22 people to random treatments; control, knees only and eyes. Please read more on this paper online or attached pdf (Wright and Czeisler 2002).
-
+For quick context, the data is about jet lag and adjusting to a different time zone. Campbell and Murphy (1998) claimed people adjust to their new time zone once the light reset their internal, circadian clock. Wright and Czeisler 2002 revisited this study and measured the circadian rhythm of melatonin production. They subjected 22 people to random treatments; control, knees only and eyes. Please read more on this paper [online](https://www.science.org/doi/epdf/10.1126/science.1071697) (Wright and Czeisler 2002).
 
 So for our analysis, we want to compare phase shifts in the circadian rhytm of melatonin productions in participants given another light treatments.
 
-
-
-
-**Note-** ANOVA *is* a **linear regression** BUT the predictor variables are *categorical* instead of being *continuous*. Also, rather than estimating the *slope* (in the case of regression), **with ANOVA you obtain an estimate of the response variable for each independent variable category.**
+Recall we said, ANOVA *is* a **linear regression** BUT the predictor variables are *categorical* instead of being *continuous*. Also, rather than estimating the *slope* (in the case of regression), **with ANOVA you obtain an estimate (mean) of the response variable for each independent variable category.**
 
 Now, let's do this in SPSS
 
 1.  Click **Analyze \> Compare Means \> One-Way ANOVA**.
 
-2.  Add the variable Shift to the **Dependent List** box, and add the variable treatment to the **Factor** box.
+2.  Add the variable Shift to the **Dependent List** box,
 
-3.  Click **Options**. Check the box for **Homogeneity of Variance**, then click **Continue**.
+3.  Add the variable treatment to the **Factor** box. Here, the "treatment" variable may not show (because we have it as string). So, we need to recode it to categories. Click on "Transform", then "Automatic recode". Recode the "treatment", save it with a new name and add it to the "Factor box".
 
-4.  Click **OK** when finished.
+4.  Click **Options**. Check the box for **Homogeneity of Variance**, then click **Continue**.
+
+5.  Click **OK** when finished.
 
 Output for the analysis will display in the ***Output Viewer*** window.
 
-![](images/ANOVA_Output.png){fig-align="center"}
+#### 
 
-```         
+***Homogeneity of Variance***
 
+From the levene test, we can see that the P value is \> 0.05 (0.85), there is no evidence to reject the H0 (they have the same variance). So, we can proceed with ANOVA
 
-From the levene test, we can see that the P value is > 0.05 (0.85), there is no evidence to reject the H0 (they have the same variance). So, we can proceed with ANOVA
-```
+![](images/Levene_Test-Homogeneity of Variance.png){fig-align="center"}
 
-**Normality test**
+***Normality test***
 
 From the Shapiro normality test, the P-value = 0.813, which is greater than the chosen P-value (0.05) and therefore, we have strong evidence to conclude that this data comes from a normal population, as such normality assumption is met.
 
 ![](images/Shapiro_wilk.png){fig-align="center"}
 
-Lastly,
+***Conclusion***
 
-Since the ANOVA test is significant, you may want to compute the Tukey test to check for pairwise-comparison between the means of groups
+Looking at the result of ANOVA table and since p is \< our chosen alpha level (0.05), we have evidence to reject the null hypothesis and conclude that there IS a difference somewhere among the treatment groups. Put formally, we conclude that the mean shift time for melatonin production is significantly different for at least one of our treatment groups (*F*~2,\ 19~ = 7.289, *p* \< 0.05). Please note that the ANOVA alone does not specifically tell us which means were different from one another.
 
-![](images/Tukey_test.png){fig-align="center"}
+So, to determine that and since the ANOVA test is significant, we would need to do *multiple comparisons* (*post-hoc*) tests.
 
-You can see that both eyes-control and knee-eyes are both significant (check the p-value)
+You may want to compute the Tukey test to check for pairwise-comparison between the means of groups. To do this, run the ANOVA again, but this time, select the "Post Hoc" button and choose Tukey. Your result window will open (and should be similar to the one below)
 
-```         
-                   diff        lwr        upr     p adj
-## eyes-control -1.24267857 -2.1682364 -0.3171207 0.0078656
-## knee-control -0.02696429 -0.9525222  0.8985936 0.9969851
-## knee-eyes     1.21571429  0.2598022  2.1716263 0.0116776
-```
+![](images/Tukey_ANOVA.png){fig-align="center"}
 
-**Which test should I use for my data?**
+In this table, we can see that every possible group of 2 treatments (pair-wise) is being compared. With our chosen p-value (0.05), we can easily decide which comparisons are significantly different from one other. For instance, If you look at the 1st row, this row compares "control vs eyes." Given that the p-value for this row = 0.008 (less than our chosen p-value), we have evidence to say that these two groups ARE significantly different.
 
-![](images/What test should I use for my data.png){fig-align="center"}
+*Which other row can we find a p-value that is less than 0.05 (our chosen p-value)*?
+
+Looking at the comparison between "eyes vs knee", we can see the p-value = 0.012 (also a significant difference).
+
+So, we have evidence to conclude that among the 3 groups, only two differences were found: control is significantly different from eyes, and knee is different from eyes.
+
+**Homogenous Subsets**
+
+Also, the last table we see here is the homogeneous subsets.
+
+![](images/Homogenous_Subsets.png){fig-align="center"}
+
+Technically, this table gives the similar information as Tukey table albeit easier to use. In this table you will see the treatments listed on the left, and a number of \"subsets\"--here, we have 2 subsets (2 columns labeled 1 and 2, respectively). In these columns, the means of the treatments are listed.
+
+To interpret this table is easy! Simply put, If the means of two groups (treatments here) NEVER appear in the same column together, they ***are*** significantly different from one another. However, if the means of two groups appear in the same column together, then they are ***not*** significantly different from one another.
+
+Looking at the table, it's easier to see that "knee" and "control" both have their means on the same column (and hence are not significantly different from one another). However, the mean of "eyes" NEVER appear in the same column as "control" and "knee" and we can conclude that their means are significantly different.
+
+Thus, If you go through every possible comparison, you will still find that the only differences are between:
+
+1.  eyes vs. control
+
+2.  eyes vs. knee
+
+Same as when we did Tukey up there!
+
+#### Revisiting T-test
+
+Instead of the Tukey (unplanned) comparison we just did, we could also conduct T-test to find out which groups are different and where the differences are (refer to last week discussion). This way, we would conduct as many t-tests of pairwise comparisons as possible. That is (and in our case), if you have 3 treatment groups, you can make the following pairwise comparisons:
+
+1.  eyes vs. control
+2.  eyes vs. knee
+3.  control vs. knee
+
+Thus, for each of these pairwise comparison, we would run a separate independent-samples t-test. Recall from last week tutorial, we said for independent sample t-test, there is a single factor (explanatory) variable with two levels which split the subjects into two groups (control vs treatment). Okay, let\'s start with the first comparison (eyes vs. control).
+
+To do this in SPSS, you can go to **Analyze \> Compare Means \> Independent-Samples T Test**.
+
+Now, place our dependent variable (Shift) in "*Test variable*" field and the *treatment* in the "*Grouping variable*" field.
+
+![](images/t-test_anova_groups.png){fig-align="center"}
+
+From the result, we can see, our t-test is significant; there is indeed a difference between control and eyes, t(13)= 3.638, p\<0.05.
+
+So, that's how to use T-test to compare two groups. But since we have other groups defined above, you can repeat the same process and the procedure is the same as described here. You only need to specify which group you want to compare under the "*Define Groups.*"
+
+#### Repeated Measures ANOVA
+
+Here, I will use the data from Behmer & Crump (2017) to explain one-factor repeated measures ANOVA.
+
+In this experiment, Behmer and Crump (2017) recruited 38 subjects to type words presented on a screen as quickly as they could. The independent variable was typing material and it had 3 levels: Normal (5 letter English words), Bigrams (5 letter non-words that have properties like real words), and Random (random 5 letter strings). The authors wanted to know whether reaction time (RT) was different according to the type of word being typed.
+
+Dependent Variables: There were three dependent variables, that all measured different aspects of typing performance. Reaction times (RTs) were defined as the temporal interval between seeing a stimulus (to type), and then starting to type it (first key press). Inter-keystroke intervals (IKSIs) are the times between each key-press. Last, accuracy was also measured (correct or incorrect key-presses). For this analysis we will use `Pure RTs` as our one DV.
+
+Nota bene: This is a repeated measures design because each participant typed letter strings from the word, bigrams, and random conditions.
+
+Behmer and Crump (2017) conducted a study with 38 participants to investigate the effect of different types of words on their typing performance. Here, the factor variable ("typing material"), had three levels: Random (random 5 letter strings), Normal (5 letter English words), and Bigrams (5 letter non-words similar to real words). The goal here was to determine if reaction time (RT) varied depending on the type of word being typed.
+
+The study measured three dependent variables:
+
+1.  RTs- reaction times- i.e. the time interval between seeing a stimulus and starting to type it.
+2.  inter-keystroke intervals (IKSIs)- the time intervals between each key-press and
+3.  accuracy- measured by assessing correct or incorrect key-presses.
+
+It is important to note that this study followed a repeated measures design, as each participant repeatedly typed letter strings from the random, normal and bigrams.
+
+To do this SPSS,
+
+Load in the data (download from the Google dive link)
+
+Let's do a quick EDA before we proceed- make a histogram plot to look at our data.
+
+Remember to do this, you can
+
+1.  go to **Graphs \>** **Histogram**
+2.  A graph window will pop up and ask you to specify the variable you would like graphed. Select the "**PureRTs**" from the list and drag it to the \"Variable\" field and click "**OK**".
+
+![](images/Hist_PureRTs.png){fig-align="center"}
+
+The result shows a clear right skewed distribution (with longer tails being on the right side of the peak). In other words, we can see that most of the reaction times falls below 5000ms. These could have been be due to distraction or other factors.
+
+Since this is a skewed distribution, the best thing to do is to remove those values (above 5000) so they do not influence or bias our results.
+
+To do this in SPSS, you can go to the top menu, select "**Data**" \> "**Select Cases**". The pop-up window will ask which cases to select. Here, we want to remove any cases \> 5000.
+
+Now, check off "If condition is satisfied" and then click "**If**". A new window will pop-up asking you to specify the condition. Select the PureRTs variable and move it to the right field. You can then, type less than 5000 (\"\< 5000\") to specify that we want to keep only values below 5000ms.
+
+Click **Continue** and voila, your data engineered! You can plot the histogram again to confirm this
+
+Recall, the data contain repeated measurements from many subjects. And our goal is to get a single reaction time/person/condition. To do this, we can take an individual\'s reaction time for a specific condition and take the average. In other words, we have to calculate the mean reaction time for each individual.
+
+To do this in SPSS, click on **Analyze \> Compare Means \> Means**
+
+In the pop-up window, select and drag the "PureRTS" into the \"Dependent List\" and the "Subject variable" should go into the \"Independent List\". Click Next and drag the "Stimulus" variable there.
+
+Finally, click OK and the result containing each subject\'s average RT per condition will show
+
+![](images/mean RT per person.png){fig-align="center"}
+
+Now, we will Conduct One-Factor Repeated Measures ANOVA on the mean reaction time per subject
 
 #### 
+
+**One-Factor Repeated Measures ANOVA**
+
+To do that, lets work with this data ( the mean we just calculated). See the link here.
+
+Load in the data to SPSS. You may have already noticed that each person\'s data is contained within a row (38 in total): there are 3 measurements corresponding to all conditions (random, normal and bigrams).
+
+So, to calculate a One-Factor Repeated Measures ANOVA in SPSS, click on
+
+1.   **Analyze \> General Linear Model\> Repeated Measures**
+2.  The next pop-up window will ask for label for within-subjects variable. You can type "**Stimulus**" into the \"Within-Subjects Factor Name\". Number of levels = 3. Then click Add, and then Define.
+
+Now, move all 3 conditions (Bigrams, Normal & Random) into the \"Within-Subjects Variables\" field and click **OK**.
+
+You should get an output like below:
+
+![](images/within-subject effects.png){fig-align="center"}
+
+From this result, we can see that there seems to be a significant effect of stimulus on reaction times, F(2, 74)= 420.33, p\<.05.
+
+Finally,
+
+To examine where the difference among these 3 conditions are (and demonstrate the use of paired sample t-test), we will do a (planned comparison) PostHoc test. Recall (like we did for one-way ANOVA) that this is a pairwise comparison and only takes 2 groups at a time.
+
+The 3 group comparisons here are:
+
+1.  random vs. normal
+
+2.  normal vs. bigram
+
+3.  bigram vs. random
+
+Run the analysis again like we did the other time for two-sample t-test but here, we will use a paired-samples t-test. This is because the same people are remeasured in each group for each comparison.
+
+In SPSS, click on **Analyze \> Compare Means \> Paired Samples T-test.** Then move the first pairwise comparison (random vs. normal) to the right and click "**OK**".
+
+You should get the result like below:
+
+![](images/paired_sample_t.png){fig-align="center"}
+
+From the result, we can see that the Random vs. Normal conditions are indeed significantly different, t(37)= 20.989, p\<0.05 (and all conventional levels of significance).
+
+Following the same approach, you can do pairwise comparisons for the remaining groups.
+
+**#End**
 
 # Chapter 3-
