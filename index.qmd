@@ -570,12 +570,6 @@ So, that's how to use T-test to compare two groups. But since we have other grou
 
 Here, I will use the data from Behmer & Crump (2017) to explain one-factor repeated measures ANOVA.
 
-In this experiment, Behmer and Crump (2017) recruited 38 subjects to type words presented on a screen as quickly as they could. The independent variable was typing material and it had 3 levels: Normal (5 letter English words), Bigrams (5 letter non-words that have properties like real words), and Random (random 5 letter strings). The authors wanted to know whether reaction time (RT) was different according to the type of word being typed.
-
-Dependent Variables: There were three dependent variables, that all measured different aspects of typing performance. Reaction times (RTs) were defined as the temporal interval between seeing a stimulus (to type), and then starting to type it (first key press). Inter-keystroke intervals (IKSIs) are the times between each key-press. Last, accuracy was also measured (correct or incorrect key-presses). For this analysis we will use `Pure RTs` as our one DV.
-
-Note that this is a repeated measures design because each participant typed letter strings from the word, bigrams, and random conditions.
-
 Behmer and Crump (2017) conducted a study with 38 participants to investigate the effect of different types of words on their typing performance. Here, the factor variable ("typing material"), had three levels: Random (random 5 letter strings), Normal (5 letter English words), and Bigrams (5 letter non-words similar to real words). The goal was to determine if reaction time (RT) varied depending on the type of word being typed.
 
 The study measured three dependent variables:
