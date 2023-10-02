@@ -395,9 +395,9 @@ Therefore, we can say that:
 
 #### **Model terminology**
 
-Often, we hear different (statistical) terms including linear regression, linear models and ANOVA and sometimes wonder the differences in all of them are. Statistically speaking, they\'re all fundamentally the same thing!
+Often, we hear different (statistical) terms including linear regression, linear models and ANOVA and sometimes wonder the differences in all of them are. Statistically speaking, they're all fundamentally the same thing!
 
-Linear model and Linear regression are just synonyms! People often use either terms when quantifying the effect of a "**continuous"** independent variable on a "**continuous"** dependent (response) variable. For example, one might be interested in saying "For every 1 unit change in X, what is the corresponding change in Y"? What is the change in academic performance for each additional hour of studying per day among high school students? For example, imagine we have data on the number of hours that high school students spend studying each day and their academic performance (e.g. scores), we can use this data to determine the relationship between these two variables. By analyzing the data, we could calculate the change in academic performance for each extra hour of studying per day among the participants.
+Linear model and Linear regression are just synonyms! People often use either terms when quantifying the effect of a "**continuous"** independent variable on a"**continuous"** dependent (response) variable. For example, one might be interested in saying "For every 1 unit change in X, what is the corresponding change in Y"? What is the change in academic performance for each additional hour of studying per day among high school students? For example, imagine we have data on the number of hours that high school students spend studying each day and their academic performance (e.g. scores), we can use this data to determine the relationship between these two variables. By analyzing the data, we could calculate the change in academic performance for each extra hour of studying per day among the participants.
 
 To do this, we could easily use a linear model to explore the relationship between them and estimate the "slope" of the line that best describes the relationship between the number of hours spent studying (X) and academic performance (Y). The slope of this line would then indicate the change in academic performance associated with each extra hour of studying per day (our research question)
 
@@ -417,7 +417,7 @@ $\beta_1 = \text{slope (the estimated change in academic performance associated 
 
 With this linear model, we can then estimate the relationship between the number of hours spent studying and academic performance, and determine whether there is a significant relationship between them. Also, we could use this model to make prediction (for examle, to predict academic performance for different levels of studying time).
 
-However **ANOVA** (Analysis of Variance), is usually used when quantifying the effect of a "**discrete (or categorical)"** independent variable on a "**continuous"** dependent variable. Imagine we have data on job satisfaction scores for employees from three different departments of company A, and we want to estimate how the mean job satisfaction score varies per department. We can use ANOVA (*a linear model*) to estimate the **mean job satisfaction score** for each department.
+However **ANOVA** (Analysis of Variance), is usually used when quantifying the effect of a "**discrete (or categorical)"** independent variable on a"**continuous"** dependent variable. Imagine we have data on job satisfaction scores for employees from three different departments of company A, and we want to estimate how the mean job satisfaction score varies per department. We can use ANOVA (*a linear model*) to estimate the **mean job satisfaction score** for each department.
 
 We can define our model to be:
 
@@ -498,7 +498,7 @@ Output for the analysis will display in the ***Output Viewer*** window.
 
 From the levene test, we can see that the P value is \> 0.05 (0.85), there is no evidence to reject the H0 (they have the same variance). So, we can proceed with ANOVA
 
-![](images/Levene_Test-Homogeneity of Variance.png){fig-align="center"}
+![](images/Levene_Test-Homogeneity%20of%20Variance.png){fig-align="center"}
 
 ***Normality test***
 
@@ -508,7 +508,7 @@ From the Shapiro normality test, the P-value = 0.813, which is greater than the 
 
 ***Conclusion***
 
-Looking at the result of ANOVA table and since p is \< our chosen alpha level (0.05), we have evidence to reject the null hypothesis and conclude that there IS a difference somewhere among the treatment groups. Put formally, we conclude that the mean shift time for melatonin production is significantly different for at least one of our treatment groups (*F*~2,\ 19~ = 7.289, *p* \< 0.05). Please note that the ANOVA alone does not specifically tell us which means were different from one another.
+Looking at the result of ANOVA table and since p is \< our chosen alpha level (0.05), we have evidence to reject the null hypothesis and conclude that there IS a difference somewhere among the treatment groups. Put formally, we conclude that the mean shift time for melatonin production is significantly different for at least one of our treatment groups (*F*~2, 19~ = 7.289, *p* \< 0.05). Please note that the ANOVA alone does not specifically tell us which means were different from one another.
 
 ![](images/ANOVA_circadian.png){fig-align="center"}
 
@@ -532,7 +532,7 @@ Also, the last table we see here is the homogeneous subsets.
 
 ![](images/Homogenous_Subsets.png){fig-align="center"}
 
-Technically, this table gives the similar information as Tukey table albeit easier to use. In this table you will see the treatments listed on the left, and a number of \"subsets\"--here, we have 2 subsets (2 columns labeled 1 and 2, respectively). In these columns, the means of the treatments are listed.
+Technically, this table gives the similar information as Tukey table albeit easier to use. In this table you will see the treatments listed on the left, and a number of "subsets"--here, we have 2 subsets (2 columns labeled 1 and 2, respectively). In these columns, the means of the treatments are listed.
 
 To interpret this table is easy! Simply put, If the means of two groups (treatments here) NEVER appear in the same column together, they ***are*** significantly different from one another. However, if the means of two groups appear in the same column together, then they are ***not*** significantly different from one another.
 
@@ -554,7 +554,7 @@ Instead of the Tukey (unplanned) comparison we just did, we could also conduct T
 2.  eyes vs. knee
 3.  control vs. knee
 
-Thus, for each of these pairwise comparison, we would run a separate independent-samples t-test. Recall from last week tutorial, we said for independent sample t-test, there is a single factor (explanatory) variable with two levels which split the subjects into two groups (control vs treatment). Okay, let\'s start with the first comparison (eyes vs. control).
+Thus, for each of these pairwise comparison, we would run a separate independent-samples t-test. Recall from last week tutorial, we said for independent sample t-test, there is a single factor (explanatory) variable with two levels which split the subjects into two groups (control vs treatment). Okay, let's start with the first comparison (eyes vs. control).
 
 To do this in SPSS, you can go to **Analyze \> Compare Means \> Independent-Samples T Test**.
 
@@ -589,7 +589,7 @@ Let's do a quick EDA before we proceed- make a histogram plot to look at our dat
 Remember to do this, you can
 
 1.  go to **Graphs \>** **Histogram**
-2.  A graph window will pop up and ask you to specify the variable you would like graphed. Select the "**PureRTs**" from the list and drag it to the \"Variable\" field and click "**OK**".
+2.  A graph window will pop up and ask you to specify the variable you would like graphed. Select the "**PureRTs**" from the list and drag it to the "Variable" field and click "**OK**".
 
 ![](images/Hist_PureRTs.png){fig-align="center"}
 
@@ -599,19 +599,19 @@ Since this is a skewed distribution, the best thing to do is to remove those val
 
 To do this in SPSS, you can go to the top menu, select "**Data**" \> "**Select Cases**". The pop-up window will ask which cases to select. Here, we want to remove any cases \> 5000.
 
-Now, check off "If condition is satisfied" and then click "**If**". A new window will pop-up asking you to specify the condition. Select the PureRTs variable and move it to the right field. You can then, type less than 5000 (\"\< 5000\") to specify that we want to keep only values below 5000ms.
+Now, check off "If condition is satisfied" and then click "**If**". A new window will pop-up asking you to specify the condition. Select the PureRTs variable and move it to the right field. You can then, type less than 5000 ("\< 5000") to specify that we want to keep only values below 5000ms.
 
 Click **Continue** and voila, your data engineered! You can plot the histogram again to confirm this
 
-Recall, the data contain repeated measurements from many subjects. And our goal is to get a single reaction time/person/condition. To do this, we can take an individual\'s reaction time for a specific condition and take the average. In other words, we have to calculate the mean reaction time for each individual.
+Recall, the data contain repeated measurements from many subjects. And our goal is to get a single reaction time/person/condition. To do this, we can take an individual's reaction time for a specific condition and take the average. In other words, we have to calculate the mean reaction time for each individual.
 
 To do this in SPSS, click on **Analyze \> Compare Means \> Means**
 
-In the pop-up window, select and drag the "PureRTS" into the \"Dependent List\" and the "Subject variable" should go into the \"Independent List\". Click Next and drag the "Stimulus" variable there.
+In the pop-up window, select and drag the "PureRTS" into the "Dependent List" and the "Subject variable" should go into the "Independent List". Click Next and drag the "Stimulus" variable there.
 
-Finally, click OK and the result containing each subject\'s average RT per condition will show
+Finally, click OK and the result containing each subject's average RT per condition will show
 
-![](images/mean RT per person.png){fig-align="center"}
+![](images/mean%20RT%20per%20person.png){fig-align="center"}
 
 Now, we will Conduct One-Factor Repeated Measures ANOVA on the mean reaction time per subject
 
@@ -621,18 +621,18 @@ Now, we will Conduct One-Factor Repeated Measures ANOVA on the mean reaction tim
 
 To do that, lets work with this data ( the mean we just calculated). See the link [here](https://drive.google.com/file/d/1MG4YI8RAdabTe8dQS4Ell2dZyfh3dj59/view?usp=sharing).
 
-Load in the data to SPSS. You may have already noticed that each person\'s data is contained within a row (38 in total): there are 3 measurements corresponding to all conditions (random, normal and bigrams).
+Load in the data to SPSS. You may have already noticed that each person's data is contained within a row (38 in total): there are 3 measurements corresponding to all conditions (random, normal and bigrams).
 
 So, to calculate a One-Factor Repeated Measures ANOVA in SPSS, click on
 
-1.   **Analyze \> General Linear Model\> Repeated Measures**
-2.  The next pop-up window will ask for label for within-subjects variable. You can type "**Stimulus**" into the \"Within-Subjects Factor Name\". Number of levels = 3. Then click Add, and then Define.
+1.  **Analyze \> General Linear Model\> Repeated Measures**
+2.  The next pop-up window will ask for label for within-subjects variable. You can type "**Stimulus**" into the "Within-Subjects Factor Name". Number of levels = 3. Then click Add, and then Define.
 
-Now, move all 3 conditions (Bigrams, Normal & Random) into the \"Within-Subjects Variables\" field and click **OK**.
+Now, move all 3 conditions (Bigrams, Normal & Random) into the "Within-Subjects Variables" field and click **OK**.
 
 You should get an output like below:
 
-![](images/within-subject effects.png){fig-align="center"}
+![](images/within-subject%20effects.png){fig-align="center"}
 
 From this result, we can see that there seems to be a significant effect of stimulus on reaction times, F(2, 74)= 420.33, p\<.05.
 
@@ -662,4 +662,698 @@ Following the same approach, you can do pairwise comparisons for the remaining g
 
 **#End**
 
-# Chapter 3-
+# Chapter 3- Two-Way ANOVA
+
+In the last tutorial, we talked about one-way ANOVA which included one factor (explanatory variable). But imagine we have more than one factors (which of course would be close to reality in research). Then in this case, we can perform a **factorial** ANOVA.
+
+Consider the model-
+
+$$y_{ijk}=μ+α_i+β_j+(αβ)_{ij}+ϵ_{ijk}$$
+
+where
+
+-   $\alpha_i =$ the effect of level $i$ of factor A. In other words, the "**main effects"** of factor A
+
+-   $\beta_j =$ the effect of level $j$ of factor B. In other words, the "**main effects"** of factor B
+
+-   $(\alpha \beta)_{ij} =$ the "**interaction term**" between the two main effects (a single parameter).
+
+-   $\epsilon_{ijk}$ are random normally $N(0, \alpha^2)$ distributed variables.
+
+-   $i$ = 1,2,...$I$, ($I$ is the number of levels of factor A).
+
+-   $j$ = 1,2,...$J$ ($J$ is the number of levels of factor B).
+
+-   $k$ = 1,2,...$K$ ($K$ is the number of replicates per group).
+
+In this kind of model, we can consider a group as a combination of a level from each of the factors. Such that for example, $y_{248}$, would represent the measurement of the 8th replicate of the group for level 2 of factor A and level 4 of factor B. This kind of model is called $I \times J$ "Factorial design" with $K$ replicates.
+
+Therefore, a two-way factorial ANOVA is a statistical analysis that is used to examine the impact of two independent categorical variables on a dependent variable. We used this to test the "main effects" of each independent (factor) variable, as well as determine if there is any "interaction" between the independent variables. Specifically, we can examine if the effect of one independent variable on the dependent variable is consistent across all levels of the other independent variable.
+
+#### *Let's explain this with data and do this in SPSS*
+
+The data for this tutorial is based on the study of Maglio and Polman (2014). This is an open-data and available on OSL open stats lab (thanks for the folks doing this). At the end of this tutorial, you should be able to reproduce the analysis and [Figure 1](https://journals.sagepub.com/stoken/default+domain/hv65WpzIjfXtVjXCbJw6/full) of this paper.
+
+**Brief study description**
+
+"A person's perceived distance from a location can be affected by the actual spatial distance to that
+
+location, but by psychological factors as well. For example, the distance to the nearest gas station may
+
+seem farther when one's car is running low on gas. In their research, Maglio and Polman (2014) sought
+
+to examine whether a person's spatial orientation (facing toward a location vs. facing away from it)
+
+would also affect its perceived distance."
+
+"To study this, the researchers recruited 202 riders on the Toronto subway green line. All participants were recruited at the Bay subway station (see map below). Half of the participants were headed eastbound (toward Bloor-Yonge and Sherbourne) whereas the other half were headed westbound (toward St. George and Spadina). Participants were randomly assigned to indicate the subjective distance of one of the four subway stations (Bloor-Yonge, Sherbourne, St. George, or Spadina)".
+
+![](images/subway_TO.png){fig-align="center"}
+
+**Things to do-**
+
+1.  Open the data file (called Maglio and Polman Experiment 1). Explore the data file.
+2.  Perform the two-way ANOVA to test whether orientation (toward or away from) interacts with Station (Spadina, St. George, Bloor-Yonge, Sherbourne).
+3.  Split the file based on Station.
+4.  Perform independent samples t-tests to determine if orientation is significantly different at each station.
+5.  Generate a line graph to depict the interaction between orientation and station.
+6.  Discuss the results of the analyses conducted above.
+
+Maglio and Polman (2014) conducted a 2 x 4 between-groups factorial experiment. The first factor, `direction`, has two levels: eastbound and westbound. The second factor, `station`, has four levels: Spadina, St. George, Bloor-Yonge, and Sherbourne. Thus, the sample of participants is divided into eight groups.
+
+To start with, we will check assumptions throughout the analysis.
+
+Notice that the sample sizes are unequal. I mean, the number of participants within each level combination of factors (i.e., Spadina East, Spadina West, etc.) varies. Four cells have 26 participants, three cells have 25 participants, and 1 cell has 23 participants.
+
+You can copy and paste this Syntax to your SPSS and get the summary stat for everything
+
+```{DATASET ACTIVATE  maglio.}
+AGGREGATE
+    /OUTFILE=*MODE=ADDVARIABLES
+    /BREAK direction station
+    /mean = MEAN(subjective_distance)
+    /count = N.
+DATASET NAME  maglio_summary.
+```
+
+It is important to note that Uneven sample sizes creates an **unbalanced design** and this will affect the analysis.
+
+First, we should recode the "direction" so we can use it in subsequent analysis. Copy and paste the syntax below to your SPSS and run it
+
+```{*Recode the direction (east = 0, west =1 )}
+
+RECODE direction ('EAST'=0) ('WEST'=1) INTO direction_recode.
+EXECUTE.
+
+
+```
+
+**Brief reminder**
+
+A factorial ANOVA compares the means across two or more explanatory variables, thereby splitting the sample into four or more groups (*remember a one-way ANOVA only has one independent variable that splits the sample into two or more groups)*.
+
+In terms of analyzing variance, if we have more than one independent variable, then you can conduct a factorial ANOVA. Notice that, in both cases, we only have *one* dependent variable.
+
+The presence of two independent variables classifies a factorial ANOVA as two-way. The assumptions of a two-way ANOVA echo those of the one-way ANOVA (we discussed last week).
+
+Three are met before data collection, three are tested.
+
+**Assumptions Before Data Collection**
+
+1.  **Two or more categorical independent variables** as factors with two or more levels;
+
+2.  **One continuous dependent variable** at the interval or ratio level;
+
+3.  **Independence of observations**, or a between-groups design, in which participants are separated into distinct groups with no overlap;
+
+**Tested Assumptions**
+
+4.  **No significant outliers**, assessed with boxplots;
+
+5.  **Normality**, assessed with the Shapiro-Wilk test for each level combination of the two factors;
+
+6.  **Homoscedasticity**, assessed with Levene's test for each combination of the two factors.
+
+An analysis of variance is robust. It can provide valid results with minor violations of normality. Since the first three assumptions are met during experimental design, we must test for **outliers, normality, and homogeneity of variances**.
+
+The null and alternative hypotheses, assessed with the *F* test, can make claims about the means between cells or claims about the interaction between factors.
+
+#### Two-Way ANOVA
+
+Since we have an unbalanced design with unequal sample sizes in each cell, we must specify the type of *sum of squares*. Type-III is usually [recommended](http://www.sthda.com/english/wiki/two-way-anova-test-in-r) in this case. When the design in unbalanced, each type of *sum of squares* will yield different results.
+
+With that in mind, let's start by constructing the ANOVA.
+
+Copy and paste this into your syntax
+
+```{*ANOVA.}
+
+DATASET ACTIVATE DataSet1.
+UNIANOVA subjective_distance BY orientation station
+  /METHOD=SSTYPE(3)
+  /INTERCEPT=INCLUDE
+  /PLOT=PROFILE(station*orientation) TYPE=LINE ERRORBAR=NO MEANREFERENCE=NO YAXIS=AUTO
+  /CRITERIA=ALPHA(0.05)
+  /DESIGN=orientation station orientation*station
+  /SAVE RESID.
+```
+
+Also, we can summarize the model to test for interaction effects. This include adding the line "print ETASQ" to the above code
+
+```{*print the effect size}
+
+UNIANOVA subjective_distance BY orientation station
+  /METHOD=SSTYPE(3)
+  /INTERCEPT=INCLUDE
+  /PLOT=PROFILE(station*orientation) TYPE=LINE ERRORBAR=NO MEANREFERENCE=NO YAXIS=AUTO
+  /PRINT ETASQ
+  /CRITERIA=ALPHA(.05)
+  /DESIGN=orientation station orientation*station.
+```
+
+![](images/ANOVA_1.PNG){fig-align="center"}
+
+From the result we can see there are two significant effects, one on station and the other on the **interaction** between orientation and station.
+
+**Interpretation**
+
+The two-way ANOVA revealed no main effect on orientaion, *F* \< 1, *p* = .574. The *F*-value did not exceed the critical value. However, there was a significant effect on station, *F*(3, 194) = 24.100, *p* \< .001. The interaction between orientation and station was also significant, *F*(3, 194) = 16.283, *p* \< .001.
+
+**Outliers**
+
+Outliers can reduce the accuracy of results and skew data. Copy and paste the code below to your SPSS
+
+```{*check for outliers}
+
+EXAMINE VARIABLES=subjective_distance BY station BY orientation
+  /PLOT=BOXPLOT
+  /STATISTICS=NONE
+  /NOTOTAL.
+
+```
+
+![](images/outliers_twowayANOVA.PNG){fig-align="center"}
+
+There are three outliers present.
+
+**Normality**
+
+The null hypothesis of the Shapiro-Wilk test is that the data are normally distributed. Remember that, for analysis of variance, we test the normality of residuals.
+
+```{*normality (shapiro wilk)}
+
+EXAMINE VARIABLES=RES_1
+  /PLOT BOXPLOT STEMLEAF NPPLOT
+  /COMPARE GROUPS
+  /STATISTICS DESCRIPTIVES
+  /CINTERVAL 95
+  /MISSING LISTWISE
+
+```
+
+![](images/normality_twowayANOVA.PNG){fig-align="center"}
+
+Since *p* \< .001, we reject the null hypothesis: ***the data are not normally distributed***. The ANOVA is a robust procedure, so it can withstand violations of normality (or you can decide to consider the equivalent non-parametric test).
+
+**Homoscedasticity**
+
+Recal that the null hypothesis of Levene's test is that the variances are homogenous.
+
+```{UNIANOVA subjective_distance BY orientation station}
+
+  /METHOD=SSTYPE(3)
+
+  /INTERCEPT=INCLUDE
+
+  /PLOT=PROFILE(station*orientation) TYPE=LINE ERRORBAR=NO MEANREFERENCE=NO YAXIS=AUTO
+
+  /PRINT ETASQ HOMOGENEITY
+
+  /CRITERIA=ALPHA(.05)
+
+  /DESIGN=orientation station orientation*station.
+```
+
+![](images/Homoge_twowayANOVA.PNG){fig-align="center"}
+
+Looking at the result and since *p* = 0.773 (\> 0.05), there is no evidence in favor of rejecting the null hypothesis. **The data are homoscedastic**.
+
+Independent T-tests
+
+The assumptions of the independent t-test are nearly identical to the two-way ANOVA, except for the requirement of the independent variable, which in this case, must be a single factor with two or more levels. The results from the three assumptions that are tested (i.e., outliers, normality, and homoscedasticity) will likely be inherited from the ANOVA. However, we will test these assumptions below for each independent t-test.
+
+We shall delineate the interaction between orientation and station by comparing the subjective-distance scores across eastbound and westbound participants for each of the stations.
+
+Social scientists usually report Cohen's *d* as the effect size of independent t-tests (we shall come back to this later in the semester more extensively). Cohen's *d* is standardized. However, in the present study, the author's chose to report partial eta-squared, which indicates the [proportion of overlap](http://psychology.okstate.edu/faculty/jgrice/psyc3214/independentsamples_t_test.pdf) between the factor and the reponse variable.
+
+Generally, effect sizes are considered:
+
+-   **small** = .01
+
+-   **medium** = .06
+
+-   **large** = .14
+
+**Spadina**
+
+Copy and paste this chunk to your SPSS and run them. First, we need to split the dataset by station. Here, we want to split the "spadina" station (West and East). Run the "filter spadina west" chunk. Do the same for "spadina east". Then merge them together and finally compute the T-test on this data.
+
+```{*filter spadina west}
+
+DATASET ACTIVATE DataSet1.
+DATASET COPY  spad_west.
+DATASET ACTIVATE  spad_west.
+FILTER OFF.
+USE ALL.
+SELECT IF (station = 1 & direction = "WEST").
+EXECUTE.
+DATASET ACTIVATE  DataSet1.
+
+
+*spadina east
+
+DATASET ACTIVATE DataSet1.
+DATASET COPY  spad_east.
+DATASET ACTIVATE  spad_east.
+FILTER OFF.
+USE ALL.
+SELECT IF (station = 1 & direction = "EAST").
+EXECUTE.
+DATASET ACTIVATE  DataSet1.
+
+
+*merge them
+
+DATASET ACTIVATE spad_east.
+SORT CASES BY direction orientation station subjective_distance direction_recode RES_1.
+DATASET ACTIVATE spad_west.
+SORT CASES BY direction orientation station subjective_distance direction_recode RES_1.
+DATASET ACTIVATE spad_east.
+MATCH FILES /FILE=*
+  /FILE='spad_west'
+  /BY direction orientation station subjective_distance direction_recode RES_1.
+EXECUTE.
+
+
+
+*compute t-test for spadina
+
+DATASET ACTIVATE spad_east.
+T-TEST GROUPS=direction_recode (0 1)
+  /MISSING=ANALYSIS
+  /VARIABLES=subjective_distance
+  /ES DISPLAY(TRUE)
+  /CRITERIA=CI(.95).
+
+
+
+```
+
+![](images/t_test-spadina.PNG){fig-align="center"}
+
+***Westbound participants rated Spadina station as being closer than eastbound participants, p \< .001.***
+
+Then we need to check for all the assumptions
+
+**Outliers**
+
+```{*check for outliers}
+    
+DATASET ACTIVATE spad_east.
+EXAMINE VARIABLES=subjective_distance BY direction
+  /PLOT=BOXPLOT
+  /STATISTICS=NONE
+  /NOTOTAL.
+```
+
+![](images/spadina_outliers.PNG){fig-align="center"}
+
+**There are two outliers.**
+
+**Normality**
+
+```{*normality}
+    
+EXAMINE VARIABLES=subjective_distance BY direction
+  /PLOT BOXPLOT STEMLEAF NPPLOT
+  /COMPARE GROUPS
+  /STATISTICS DESCRIPTIVES
+  /CINTERVAL 95
+  /MISSING LISTWISE
+  /NOTOTAL.
+
+
+```
+
+![](images/spadina_normality.PNG){fig-align="center"}
+
+Both Sig. \< .05, so we reject the null hypothesis: the data are not normal.
+
+**Homoscedasticity**
+
+```{*Homoscedasticity}
+
+ONEWAY subjective_distance BY direction_recode
+  /ES=OVERALL
+  /STATISTICS HOMOGENEITY 
+  /MISSING ANALYSIS
+  /CRITERIA=CILEVEL(0.95).
+
+```
+
+![](images/spadina_homoge.PNG){fig-align="center"}
+
+The variances are homogenous, *p* = 0.701.
+
+**Now, we will do the same for all other stations**
+
+**St-George**
+
+```{*filter st_george west}
+
+DATASET ACTIVATE DataSet1.
+DATASET COPY  st_george_west.
+DATASET ACTIVATE  st_george_west.
+FILTER OFF.
+USE ALL.
+SELECT IF (station = 2 & direction = "WEST").
+EXECUTE.
+DATASET ACTIVATE  DataSet1.
+
+
+*st_george east
+
+DATASET ACTIVATE DataSet1.
+DATASET COPY  st_george_east.
+DATASET ACTIVATE  st_george_east.
+FILTER OFF.
+USE ALL.
+SELECT IF (station = 2 & direction = "EAST").
+EXECUTE.
+DATASET ACTIVATE  DataSet1.
+
+
+*merge them
+
+DATASET ACTIVATE st_george_east.
+SORT CASES BY direction orientation station subjective_distance direction_recode RES_1.
+DATASET ACTIVATE st_george_west.
+SORT CASES BY direction orientation station subjective_distance direction_recode RES_1.
+DATASET ACTIVATE st_george_east.
+MATCH FILES /FILE=*
+  /FILE='st_george_west'
+  /BY direction orientation station subjective_distance direction_recode RES_1.
+EXECUTE.
+
+
+
+*compute t-test for st_george
+
+DATASET ACTIVATE st_george_east.
+T-TEST GROUPS=direction_recode (0 1)
+  /MISSING=ANALYSIS
+  /VARIABLES=subjective_distance
+  /ES DISPLAY(TRUE)
+  /CRITERIA=CI(.95).
+
+
+
+```
+
+![](images/t_test-st_george.PNG){fig-align="center"}
+
+***Westbound participants rated St. George as being closer than eastbound participants, p \< .001.***
+
+**Check for assumptions- Outliers, normality and homogeneity of variance**
+
+```{*check for outliers}
+    
+DATASET ACTIVATE st_george_east.
+EXAMINE VARIABLES=subjective_distance BY direction
+  /PLOT=BOXPLOT
+  /STATISTICS=NONE
+  /NOTOTAL.
+
+```
+
+![](images/st_george_outliers.PNG){fig-align="center"}
+
+There is one outlier among eastbound participants.
+
+**Normality**
+
+```{*normality}
+    
+EXAMINE VARIABLES=subjective_distance BY direction
+  /PLOT BOXPLOT STEMLEAF NPPLOT
+  /COMPARE GROUPS
+  /STATISTICS DESCRIPTIVES
+  /CINTERVAL 95
+  /MISSING LISTWISE
+  /NOTOTAL.
+
+```
+
+![](images/st_george_normality.PNG){fig-align="center"}
+
+Since both Sig. \< .05, we accept the alternative hypothesis: the data are not normally distributed.
+
+**Homoscedasticity**
+
+```{*Homoscedasticity}
+
+
+ONEWAY subjective_distance BY direction_recode
+  /ES=OVERALL
+  /STATISTICS HOMOGENEITY 
+  /MISSING ANALYSIS
+  /CRITERIA=CILEVEL(0.95).
+
+```
+
+![](images/st_george_homoge.PNG){fig-align="center"}
+
+Since *p* = .666, we accept the null hypothesis: the data are homoscedastic.
+
+**Bloor_yonge Station**
+
+```{*filter bloor_yonge_west}
+
+DATASET ACTIVATE DataSet1.
+DATASET COPY  bloor_yonge_west.
+DATASET ACTIVATE  bloor_yonge_west.
+FILTER OFF.
+USE ALL.
+SELECT IF (station = 3 & direction = "WEST").
+EXECUTE.
+DATASET ACTIVATE  DataSet1.
+
+
+*bloor_yonge east
+
+DATASET ACTIVATE DataSet1.
+DATASET COPY  bloor_yonge_east.
+DATASET ACTIVATE  bloor_yonge_east.
+FILTER OFF.
+USE ALL.
+SELECT IF (station = 3 & direction = "EAST").
+EXECUTE.
+DATASET ACTIVATE  DataSet1.
+
+
+*merge them
+
+DATASET ACTIVATE bloor_yonge_east.
+SORT CASES BY direction orientation station subjective_distance direction_recode RES_1.
+DATASET ACTIVATE bloor_yonge_west.
+SORT CASES BY direction orientation station subjective_distance direction_recode RES_1.
+DATASET ACTIVATE bloor_yonge_east.
+MATCH FILES /FILE=*
+  /FILE='bloor_yonge_west'
+  /BY direction orientation station subjective_distance direction_recode RES_1.
+EXECUTE.
+
+
+
+*compute t-test for bloor_yonge
+
+DATASET ACTIVATE bloor_yonge_east.
+T-TEST GROUPS=direction_recode (0 1)
+  /MISSING=ANALYSIS
+  /VARIABLES=subjective_distance
+  /ES DISPLAY(TRUE)
+  /CRITERIA=CI(.95).
+
+
+```
+
+![](images/t_test-bloor-yonge.PNG){fig-align="center"}
+
+***Eastbound participants rated Bloor-Yonge as being closer than westbound participants, p = .053.***
+
+**Outliers**
+
+```{*check for outliers}
+    
+DATASET ACTIVATE bloor_yonge_east.
+EXAMINE VARIABLES=subjective_distance BY direction
+  /PLOT=BOXPLOT
+  /STATISTICS=NONE
+  /NOTOTAL.
+
+
+```
+
+![](images/bloor-yonge_outliers.PNG){fig-align="center"}
+
+**No outliers present.**
+
+**Normality**
+
+```{*normality}
+    
+EXAMINE VARIABLES=subjective_distance BY direction
+  /PLOT BOXPLOT STEMLEAF NPPLOT
+  /COMPARE GROUPS
+  /STATISTICS DESCRIPTIVES
+  /CINTERVAL 95
+  /MISSING LISTWISE
+  /NOTOTAL.
+
+```
+
+![](images/bloor-yonge_normality.PNG){fig-align="center"}
+
+Both Sig \< .05, so we reject the null hypothesis. The normality assumption is violated.
+
+**Homoscedasticity**
+
+```{*Homoscedasticity}
+
+
+ONEWAY subjective_distance BY direction_recode
+  /ES=OVERALL
+  /STATISTICS HOMOGENEITY 
+  /MISSING ANALYSIS
+  /CRITERIA=CILEVEL(0.95).
+
+```
+
+![](images/bloor-yonge_homoge.PNG){fig-align="center"}
+
+*P* = 0.061, we accept the null hypothesis: the variances are homogenous.
+
+Finally, we can compute the test for the 4th train station
+
+**Sherbourne**
+
+```{*filter sherbourne_west}
+
+DATASET ACTIVATE DataSet1.
+DATASET COPY  sherbourne_west.
+DATASET ACTIVATE  sherbourne_west.
+FILTER OFF.
+USE ALL.
+SELECT IF (station = 4 & direction = "WEST").
+EXECUTE.
+DATASET ACTIVATE  DataSet1.
+
+
+*sherbourne east
+
+DATASET ACTIVATE Dataset1.
+DATASET COPY  sherbourne_east.
+DATASET ACTIVATE  sherbourne_east.
+FILTER OFF.
+USE ALL.
+SELECT IF (station = 4 & direction = "EAST").
+EXECUTE.
+DATASET ACTIVATE  DataSet1.
+
+
+*merge them
+
+DATASET ACTIVATE sherbourne_east.
+SORT CASES BY direction orientation station subjective_distance direction_recode RES_1.
+DATASET ACTIVATE sherbourne_west.
+SORT CASES BY direction orientation station subjective_distance direction_recode RES_1.
+DATASET ACTIVATE sherbourne_east.
+MATCH FILES /FILE=*
+  /FILE='sherbourne_west'
+  /BY direction orientation station subjective_distance direction_recode RES_1.
+EXECUTE.
+
+
+
+*compute t-test for sherbourne
+
+DATASET ACTIVATE sherbourne_east.
+T-TEST GROUPS=direction_recode (0 1)
+  /MISSING=ANALYSIS
+  /VARIABLES=subjective_distance
+  /ES DISPLAY(TRUE)
+  /CRITERIA=CI(.95).
+
+```
+
+![](images/t_test-sherbourne.PNG){fig-align="center"}
+
+**Eastbound participants rated Sherbourne as being closer than westbound participants, p \< .001.**
+
+**Outliers**
+
+```{*check for outliers}
+    
+DATASET ACTIVATE sherbourne_east.
+EXAMINE VARIABLES=subjective_distance BY direction
+  /PLOT=BOXPLOT
+  /STATISTICS=NONE
+  /NOTOTAL.
+  
+
+```
+
+![](images/sherbourne_outliers.PNG){fig-align="center"}
+
+No outliers here.
+
+**Normality**
+
+```{*normality}
+    
+EXAMINE VARIABLES=subjective_distance BY direction
+  /PLOT BOXPLOT STEMLEAF NPPLOT
+  /COMPARE GROUPS
+  /STATISTICS DESCRIPTIVES
+  /CINTERVAL 95
+  /MISSING LISTWISE
+  /NOTOTAL.
+  
+
+```
+
+![](images/sherbourne_normality.PNG){fig-align="center"}
+
+**The data are not normally distributed (both Sig. \< 0.05).**
+
+**Homoscedasticity**
+
+```{*Homoscedasticity}
+
+
+ONEWAY subjective_distance BY direction_recode
+  /ES=OVERALL
+  /STATISTICS HOMOGENEITY 
+  /MISSING ANALYSIS
+  /CRITERIA=CILEVEL(0.95).
+
+
+```
+
+![](images/sherbourne_homoge.PNG){fig-align="center"}
+
+The variances are equal (*p* = 0.657).
+
+Finally, let's visualize the data to show the relationship between station and the direction of travel (orientation)- this is similar to the one in [Figure 1](https://journals.sagepub.com/stoken/default+domain/hv65WpzIjfXtVjXCbJw6/full) of this paper.
+
+```{DATASET ACTIVATE DataSet1.}
+GRAPH
+  /LINE(MULTIPLE)=MEAN(subjective_distance) BY station BY direction.
+
+```
+
+![](images/last_line_graph_2.PNG){fig-align="center"}
+
+N.B.- For good-publication friendly- plots, I strong recommend using R/R-Studio. See the same plot in R- which clearly looks more like the one in the paper- including the CI)
+
+![](images/Fig_1_R-plot.png){fig-align="center"}
+
+**Conclusions**
+
+Based onn the result, we can conclude that the two-way ANOVA revealed no main effect on orientaion, *F* \< 1, *p* = .574. The *F*-value did not exceed the critical value. However, there was a significant effect on station, *F*(3, 194) = 24.100, *p* \< .001. The interaction between orientation and station was also significant, *F*(3, 194) = 16.283, *p* \< .001. Investigating this interaction revealed that eastbound participants perceived stations to the East as being closer than did westbound participants, both for Bloor-Yonge (*p* = .053) and Sherbourne (*p* \< .001). Meanwhile, travelers heading west from Bay station rated the subjective-distance of St. George (*p* \< .001) and Spadina (*p* \< .001) as closer than did eastbound participants.
+
+#### CITATION
+
+Maglio, S. J., & Polman, E. (2014). Spatial orientation shrinks and expands psychological distance.
+
+Psychological Science, 25, 1345-1352.
