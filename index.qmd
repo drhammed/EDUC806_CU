@@ -859,20 +859,19 @@ Since *p* \< .001, we reject the null hypothesis: ***the data are not normally d
 
 Recal that the null hypothesis of Levene's test is that the variances are homogenous.
 
-```{UNIANOVA subjective_distance BY orientation station}
+`UNIANOVA subjective_distance BY orientation station`
 
-  /METHOD=SSTYPE(3)
+`/METHOD=SSTYPE(3)`
 
-  /INTERCEPT=INCLUDE
+`/INTERCEPT=INCLUDE`
 
-  /PLOT=PROFILE(station*orientation) TYPE=LINE ERRORBAR=NO MEANREFERENCE=NO YAXIS=AUTO
+`/PLOT=PROFILE(station*orientation) TYPE=LINE ERRORBAR=NO MEANREFERENCE=NO YAXIS=AUTO`
 
-  /PRINT ETASQ HOMOGENEITY
+`/PRINT ETASQ HOMOGENEITY`
 
-  /CRITERIA=ALPHA(.05)
+`/CRITERIA=ALPHA(.05)`
 
-  /DESIGN=orientation station orientation*station.
-```
+`/DESIGN=orientation station orientation*station.`
 
 ![](images/Homoge_twowayANOVA.PNG){fig-align="center"}
 
@@ -1352,7 +1351,7 @@ N.B.- For good-publication friendly- plots, I strong recommend using R/R-Studio.
 
 Based onn the result, we can conclude that the two-way ANOVA revealed no main effect on orientaion, *F* \< 1, *p* = .574. The *F*-value did not exceed the critical value. However, there was a significant effect on station, *F*(3, 194) = 24.100, *p* \< .001. The interaction between orientation and station was also significant, *F*(3, 194) = 16.283, *p* \< .001. Investigating this interaction revealed that eastbound participants perceived stations to the East as being closer than did westbound participants, both for Bloor-Yonge (*p* = .053) and Sherbourne (*p* \< .001). Meanwhile, travelers heading west from Bay station rated the subjective-distance of St. George (*p* \< .001) and Spadina (*p* \< .001) as closer than did eastbound participants.
 
-#### CITATION
+#### Reference
 
 Maglio, S. J., & Polman, E. (2014). Spatial orientation shrinks and expands psychological distance.
 
