@@ -801,7 +801,7 @@ H_0 = \mu_1 = \mu_2 \hspace 2ex or \hspace3ex H_a = \mu_1 \neq \mu_2
 <p>Therefore, a two-way factorial ANOVA is a statistical analysis that is used to examine the impact of two independent categorical variables on a dependent variable. We used this to test the “main effects” of each independent (factor) variable, as well as determine if there is any “interaction” between the independent variables. Specifically, we can examine if the effect of one independent variable on the dependent variable is consistent across all levels of the other independent variable.</p>
 <section id="lets-explain-this-with-data-and-do-this-in-spss" class="level4">
 <h4 class="anchored" data-anchor-id="lets-explain-this-with-data-and-do-this-in-spss"><em>Let’s explain this with data and do this in SPSS</em></h4>
-<p>The data for this tutorial is based on the study of Maglio and Polman (2014). This is an open-data and available on OSL open stats lab (thanks for the folks doing this). At the end of this tutorial, you should be able to reproduce the analysis and <a href="https://journals.sagepub.com/stoken/default+domain/hv65WpzIjfXtVjXCbJw6/full">Figure 1</a> of this paper.</p>
+<p>The data for this tutorial is based on the study of Maglio and Polman (2014). This is an open-data and available on OSL open stats lab (thanks to the folks doing this). At the end of this tutorial, you should be able to reproduce the analysis and <a href="https://journals.sagepub.com/stoken/default+domain/hv65WpzIjfXtVjXCbJw6/full">Figure 1</a> of this paper.</p>
 <p><strong>Brief study description</strong></p>
 <p>“A person’s perceived distance from a location can be affected by the actual spatial distance to that</p>
 <p>location, but by psychological factors as well. For example, the distance to the nearest gas station may</p>
@@ -937,20 +937,13 @@ EXAMINE VARIABLES=RES_1
 <p>Since <em>p</em> &lt; .001, we reject the null hypothesis: <strong><em>the data are not normally distributed</em></strong>. The ANOVA is a robust procedure, so it can withstand violations of normality (or you can decide to consider the equivalent non-parametric test).</p>
 <p><strong>Homoscedasticity</strong></p>
 <p>Recal that the null hypothesis of Levene’s test is that the variances are homogenous.</p>
-<div class="cell">
-<pre class="unianova cell-code"><code>
-  /METHOD=SSTYPE(3)
-
-  /INTERCEPT=INCLUDE
-
-  /PLOT=PROFILE(station*orientation) TYPE=LINE ERRORBAR=NO MEANREFERENCE=NO YAXIS=AUTO
-
-  /PRINT ETASQ HOMOGENEITY
-
-  /CRITERIA=ALPHA(.05)
-
-  /DESIGN=orientation station orientation*station.</code></pre>
-</div>
+<p><code>UNIANOVA subjective_distance BY orientation station</code></p>
+<p><code>/METHOD=SSTYPE(3)</code></p>
+<p><code>/INTERCEPT=INCLUDE</code></p>
+<p><code>/PLOT=PROFILE(station*orientation) TYPE=LINE ERRORBAR=NO MEANREFERENCE=NO YAXIS=AUTO</code></p>
+<p><code>/PRINT ETASQ HOMOGENEITY</code></p>
+<p><code>/CRITERIA=ALPHA(.05)</code></p>
+<p><code>/DESIGN=orientation station orientation*station.</code></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/Homoge_twowayANOVA.PNG" class="img-fluid figure-img"></p>
@@ -1382,7 +1375,7 @@ ONEWAY subjective_distance BY direction_recode
 <p><img src="images/last_line_graph_2.PNG" class="img-fluid figure-img"></p>
 </figure>
 </div>
-<p>N.B.- For good-publication friendly- plots, I strong recommend using R/R-Studio. See the same plot in R- which clearly looks more like the one in the paper- including the CI)</p>
+<p>N.B.- For good-publication friendly- plots, I strongly recommend using R/R-Studio. See the same plot in R- which clearly looks more like the one in the paper- including the CI)</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/Fig_1_R-plot.png" class="img-fluid figure-img"></p>
@@ -1391,8 +1384,8 @@ ONEWAY subjective_distance BY direction_recode
 <p><strong>Conclusions</strong></p>
 <p>Based onn the result, we can conclude that the two-way ANOVA revealed no main effect on orientaion, <em>F</em> &lt; 1, <em>p</em> = .574. The <em>F</em>-value did not exceed the critical value. However, there was a significant effect on station, <em>F</em>(3, 194) = 24.100, <em>p</em> &lt; .001. The interaction between orientation and station was also significant, <em>F</em>(3, 194) = 16.283, <em>p</em> &lt; .001. Investigating this interaction revealed that eastbound participants perceived stations to the East as being closer than did westbound participants, both for Bloor-Yonge (<em>p</em> = .053) and Sherbourne (<em>p</em> &lt; .001). Meanwhile, travelers heading west from Bay station rated the subjective-distance of St.&nbsp;George (<em>p</em> &lt; .001) and Spadina (<em>p</em> &lt; .001) as closer than did eastbound participants.</p>
 </section>
-<section id="citation" class="level4">
-<h4 class="anchored" data-anchor-id="citation">CITATION</h4>
+<section id="reference" class="level4">
+<h4 class="anchored" data-anchor-id="reference">Reference</h4>
 <p>Maglio, S. J., &amp; Polman, E. (2014). Spatial orientation shrinks and expands psychological distance.</p>
 <p>Psychological Science, 25, 1345-1352.</p>
 
