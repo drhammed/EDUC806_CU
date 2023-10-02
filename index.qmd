@@ -692,7 +692,7 @@ Therefore, a two-way factorial ANOVA is a statistical analysis that is used to e
 
 #### *Let's explain this with data and do this in SPSS*
 
-The data for this tutorial is based on the study of Maglio and Polman (2014). This is an open-data and available on OSL open stats lab (thanks for the folks doing this). At the end of this tutorial, you should be able to reproduce the analysis and [Figure 1](https://journals.sagepub.com/stoken/default+domain/hv65WpzIjfXtVjXCbJw6/full) of this paper.
+The data for this tutorial is based on the study of Maglio and Polman (2014). This is an open-data and available on OSL open stats lab (thanks to the folks doing this). At the end of this tutorial, you should be able to reproduce the analysis and [Figure 1](https://journals.sagepub.com/stoken/default+domain/hv65WpzIjfXtVjXCbJw6/full) of this paper.
 
 **Brief study description**
 
@@ -1343,7 +1343,7 @@ GRAPH
 
 ![](images/last_line_graph_2.PNG){fig-align="center"}
 
-N.B.- For good-publication friendly- plots, I strong recommend using R/R-Studio. See the same plot in R- which clearly looks more like the one in the paper- including the CI)
+N.B.- For good-publication friendly- plots, I strongly recommend using R/R-Studio. See the same plot in R- which clearly looks more like the one in the paper- including the CI)
 
 ![](images/Fig_1_R-plot.png){fig-align="center"}
 
