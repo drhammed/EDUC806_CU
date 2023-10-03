@@ -712,7 +712,7 @@ would also affect its perceived distance."
 
 **Things to do-**
 
-1.  Open the data file (called Maglio and Polman Experiment 1). Explore the data file.
+1.  Open the data file (called Maglio and Polman Experiment 1). Explore the data file. This is the [link](https://drive.google.com/drive/folders/1I17EmHGdDHAmqOjEZ5X7tnM3DpXHUD4I?usp=sharing).
 2.  Perform the two-way ANOVA to test whether orientation (toward or away from) interacts with Station (Spadina, St. George, Bloor-Yonge, Sherbourne).
 3.  Split the file based on Station.
 4.  Perform independent samples t-tests to determine if orientation is significantly different at each station.
